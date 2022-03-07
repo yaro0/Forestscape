@@ -15,4 +15,9 @@ public class Cubescript : MonoBehaviour
     {
         
     }
+
+    void FixedUpdate()
+    {
+
+    }
 }
