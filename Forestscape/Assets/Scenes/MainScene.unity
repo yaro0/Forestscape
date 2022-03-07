@@ -299,9 +299,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 838547398389864693, guid: 24ec9868e65dc3b438e738ff7385bc30, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3958396566152383715, guid: 24ec9868e65dc3b438e738ff7385bc30, type: 3}
       propertyPath: m_Name
       value: PlayerCapsule Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958396566152383715, guid: 24ec9868e65dc3b438e738ff7385bc30, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4441917131605661273, guid: 24ec9868e65dc3b438e738ff7385bc30, type: 3}
       propertyPath: m_RootOrder
