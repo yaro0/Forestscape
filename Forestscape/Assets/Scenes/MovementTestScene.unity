@@ -541,6 +541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCapsule
       objectReference: {fileID: 0}
+    - target: {fileID: 2657043592156054451, guid: 774bde840e9dafe47949204360b19129, type: 3}
+      propertyPath: analogMovement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4205889349769543484, guid: 774bde840e9dafe47949204360b19129, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -583,6 +587,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4205889349769543484, guid: 774bde840e9dafe47949204360b19129, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560264918879381842, guid: 774bde840e9dafe47949204360b19129, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0000000617074
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560264918879381842, guid: 774bde840e9dafe47949204360b19129, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560264918879381842, guid: 774bde840e9dafe47949204360b19129, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000043213356
+      objectReference: {fileID: 0}
+    - target: {fileID: 6560264918879381842, guid: 774bde840e9dafe47949204360b19129, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
