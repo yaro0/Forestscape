@@ -19,6 +19,7 @@ public class AiMovementScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("AiMovementScript start");
         rigidBodyComponent = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         System.Console.Write("isWalking false");
@@ -35,31 +36,34 @@ public class AiMovementScript : MonoBehaviour
         {
             //rigidBodyComponent.AddForce(Vector3.right * Time.deltaTime * rotationSpeed, ForceMode.Force);
             transform.Rotate(transform.up * Time.deltaTime * rotationSpeed);
-            animator.SetBool("IsWalking", false);
+            //animator.SetBool("IsWalking", false);
 
         }
         if(isRotatingLeft) 
         {
             //rigidBodyComponent.AddForce(Vector3.left * Time.deltaTime * -rotationSpeed, ForceMode.Force);
             transform.Rotate(transform.up * Time.deltaTime * -rotationSpeed);
-            animator.SetBool("IsWalking", false);
+            //animator.SetBool("IsWalking", false);
         }
 
         
-
         if(isWalking)
         {
         
             rigidBodyComponent.AddForce(transform.forward * movementSpeeed); 
             animator.SetBool("IsWalking", true);
-            System.Console.Write("isWalking true");
+           
+           // Debug.Log("isWalking true");
 
         }
 
         if(!isWalking) {
             animator.SetBool("IsWalking", false);
-            System.Console.Write("isWalking false");
+         
+           // Debug.Log("isWalking false");
         }
+
+
     }
 
     IEnumerator Wander(){
@@ -67,17 +71,21 @@ public class AiMovementScript : MonoBehaviour
         int rotationWait = Random.Range(1, 3);
         int rotationDirection = Random.Range(1, 3);
         int walkWait = Random.Range(1,3);
-        int walkTime = Random.Range(1,5);
+        int walkTime = Random.Range(2,7);
 
         isWandering = true;
 
-        yield return new WaitForSeconds(walkWait);
+        yield return new WaitForSeconds(3);
         isWalking = true;
-        
-        yield return new WaitForSeconds(walkTime);
+        Debug.Log("isWalking true");
+        animator.SetBool("IsWalking", true);
+        yield return new WaitForSeconds(3);
 
         isWalking = false;
-
+        Debug.Log("isWalking false");
+        animator.SetBool("IsWalking", false);
+        
+        
         yield return new WaitForSeconds(rotationWait);
 
 
