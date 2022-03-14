@@ -14,6 +14,15 @@ public class Interactable : MonoBehaviour, IInteractable
         return true;
     }
 
+    public void Interaction()
+    {
+        if (Interact())
+        {
+            Debug.Log("Interacted");
+
+        }
+    }
+
     public void DestroySelf(){
         Destroy(gameObject);
     }
