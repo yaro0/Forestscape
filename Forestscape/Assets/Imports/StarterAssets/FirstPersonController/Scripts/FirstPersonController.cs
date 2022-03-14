@@ -127,6 +127,7 @@ namespace StarterAssets
 
 				// rotate the player left and right
 				transform.Rotate(Vector3.up * _rotationVelocity);
+
 			}
 		}
 
