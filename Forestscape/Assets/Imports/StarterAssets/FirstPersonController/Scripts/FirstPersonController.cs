@@ -56,6 +56,7 @@ namespace StarterAssets
 
 		// cinemachine
 		private float _cinemachineTargetPitch;
+		private float _cinemachineTargetYaw;
 
 		// player
 		private float _speed;
@@ -109,13 +110,36 @@ namespace StarterAssets
 			// set sphere position, with offset
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+
 		}
 
 		private void CameraRotation()
 		{
+
+			// UP AND DOWN
 			// if there is an input
 			if (_input.look.sqrMagnitude >= _threshold)
 			{
+				_cinemachineTargetYaw += _input.look.x * RotationSpeed * Time.deltaTime; // y
+				_rotationVelocity = _input.look.y * RotationSpeed * Time.deltaTime;
+
+				// clamp our pitch rotation
+				_cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, BottomClamp, TopClamp);
+
+				// Update Cinemachine camera target pitch
+				CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(0.0f, _cinemachineTargetYaw, 0.0f);
+
+				// rotate the player up and down
+				transform.Rotate(Vector3.right * _rotationVelocity);
+
+			}
+
+			
+			//RIGHT AND LEFT
+			// if there is an input
+			if (_input.look.sqrMagnitude >= _threshold)
+			{
+
 				_cinemachineTargetPitch += _input.look.y * RotationSpeed * Time.deltaTime;
 				_rotationVelocity = _input.look.x * RotationSpeed * Time.deltaTime;
 
@@ -128,7 +152,9 @@ namespace StarterAssets
 				// rotate the player left and right
 				transform.Rotate(Vector3.up * _rotationVelocity);
 
+		
 			}
+	
 		}
 
 		private void Move()
