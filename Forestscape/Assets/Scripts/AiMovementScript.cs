@@ -70,16 +70,16 @@ public class AiMovementScript : MonoBehaviour
         int rotationTime = Random.Range(1, 3);
         int rotationWait = Random.Range(1, 3);
         int rotationDirection = Random.Range(1, 3);
-        int walkWait = Random.Range(1,3);
-        int walkTime = Random.Range(2,7);
+        int walkWait = Random.Range(1,20);
+        int walkTime = Random.Range(10,20);
 
         isWandering = true;
 
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(walkWait);
         isWalking = true;
         Debug.Log("isWalking true");
         animator.SetBool("IsWalking", true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(walkTime);
 
         isWalking = false;
         Debug.Log("isWalking false");
