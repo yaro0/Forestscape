@@ -9,9 +9,10 @@ MonoImporter:
   - prefabSlot: {fileID: 116994, guid: 86bd66a1aad581444a3c8b4999ca67b1, type: 3}
   - prefabSlotContainer: {fileID: 100000, guid: 2343060c43f7ce94f887882415313e92,
       type: 3}
-  - prefabItem: {instanceID: 0}
-  - prefabDraggingItemContainer: {instanceID: 0}
-  - prefabPanel: {instanceID: 0}
+  - prefabItem: {fileID: 100002, guid: 8beb0b8751c81ea4e9f32ea69a6856c3, type: 3}
+  - prefabDraggingItemContainer: {fileID: 100000, guid: 2af5d33a89bbcd5429f9dca7d340fa20,
+      type: 3}
+  - prefabPanel: {fileID: 100006, guid: a58e4d3c31368a64eb9518488df4e15a, type: 3}
   - itemDatabase: {instanceID: 0}
   - PanelRectTransform: {instanceID: 0}
   - PanelImage: {instanceID: 0}
