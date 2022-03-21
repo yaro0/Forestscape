@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
+  <DenyEntryCollectionPermission>k__BackingField: 0
   m_DefaultGroup: dc8650f8e8a567946bbb209c8ad4be08
+  m_CachedHash:
+    m_u32_0: 0
+    m_u32_1: 0
+    m_u32_2: 0
+    m_u32_3: 0
+  m_IsTemporary: 0
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -88,6 +95,7 @@ MonoBehaviour:
   m_CertificateHandlerType:
     m_AssemblyName: 
     m_ClassName: 
+    <ValueChanged>k__BackingField: 0
   m_ActivePlayerDataBuilderIndex: 3
   m_DataBuilders:
   - {fileID: 11400000, guid: 534511cb4ba999c4c8424928014c90a9, type: 2}
@@ -100,8 +108,10 @@ MonoBehaviour:
     m_Settings: {fileID: 11400000}
     m_NextInstanceId: 0
     m_RegisteredServiceTypeRefs: []
+    exitingEditMode: 0
     m_GlobalProfileVariablesInfos:
     - key: PrivateIpAddress
       value: 192.168.56.1
     - key: PrivateIpAddress_1
       value: 10.150.130.38
+  m_DefaultGroupTemplateName: Packed Assets
