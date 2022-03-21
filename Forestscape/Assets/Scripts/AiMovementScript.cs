@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//https://youtu.be/Zjlg9F3FRJs
+
 public class AiMovementScript : MonoBehaviour
 {
     private Animator animator;
