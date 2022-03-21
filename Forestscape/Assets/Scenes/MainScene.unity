@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19561633, g: 0.23706588, b: 0.31044653, a: 1}
+  m_IndirectSpecularColor: {r: 0.48316282, g: 0.5280332, b: 0.5973567, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -200,8 +200,7 @@ Tree:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85559720}
   m_SpeedTreeWindAsset: {fileID: 0}
-  m_TreeData: {fileID: 114336575978543202, guid: 6c9e41e24d2bc6b488c927f43944457b,
-    type: 3}
+  m_TreeData: {fileID: 114336575978543202, guid: 6c9e41e24d2bc6b488c927f43944457b, type: 3}
 --- !u!4 &85559724
 Transform:
   m_ObjectHideFlags: 0
@@ -452,8 +451,7 @@ Tree:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646395120}
   m_SpeedTreeWindAsset: {fileID: 0}
-  m_TreeData: {fileID: 114336575978543202, guid: 7d39a68237432ea41ae92c75eb21dcf4,
-    type: 3}
+  m_TreeData: {fileID: 114336575978543202, guid: 7d39a68237432ea41ae92c75eb21dcf4, type: 3}
 --- !u!4 &646395124
 Transform:
   m_ObjectHideFlags: 0
@@ -621,8 +619,7 @@ Tree:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879299894}
   m_SpeedTreeWindAsset: {fileID: 0}
-  m_TreeData: {fileID: 114336575978543202, guid: 84bb771a8038d2648bd2421451c4018d,
-    type: 3}
+  m_TreeData: {fileID: 114336575978543202, guid: 84bb771a8038d2648bd2421451c4018d, type: 3}
 --- !u!4 &879299898
 Transform:
   m_ObjectHideFlags: 0
@@ -644,63 +641,63 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6161035176913595276, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595264, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161035176913595276, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_Name
       value: Character
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
+      propertyPath: jumpPower
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
+      propertyPath: Sensitivity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 172.28423
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 8.34
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalPosition.z
       value: 302.41934
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0,
-        type: 3}
+    - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -981,8 +978,7 @@ Tree:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641865147}
   m_SpeedTreeWindAsset: {fileID: 0}
-  m_TreeData: {fileID: 114336575978543202, guid: a7984f59c227d0240b9771d2797a085c,
-    type: 3}
+  m_TreeData: {fileID: 114336575978543202, guid: a7984f59c227d0240b9771d2797a085c, type: 3}
 --- !u!4 &1641865151
 Transform:
   m_ObjectHideFlags: 0
