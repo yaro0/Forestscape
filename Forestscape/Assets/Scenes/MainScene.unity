@@ -643,7 +643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6161035176913595264, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6161035176913595276, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_Name
@@ -651,11 +651,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: jumpPower
-      value: 50
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: Sensitivity
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
+      propertyPath: crouchingSpeed
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6161035176913595279, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: m_RootOrder
