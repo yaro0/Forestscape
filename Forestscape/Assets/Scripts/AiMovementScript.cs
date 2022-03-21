@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//https://youtu.be/Zjlg9F3FRJs
+
 public class AiMovementScript : MonoBehaviour
 {
     private Animator animator;
@@ -14,6 +16,7 @@ public class AiMovementScript : MonoBehaviour
     private bool isRotatingLeft = false;
     private bool isRotatingRight = false;
     private bool isWalking = false;
+    private bool isEating = false;
 
 
     // Start is called before the first frame update
@@ -28,18 +31,18 @@ public class AiMovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isWandering == false){
+        if(isWandering == false && animator.GetBool("IsRunning") == false){
             StartCoroutine(Wander());
         }
 
-        if(isRotatingRight) 
+        if(isRotatingRight && animator.GetBool("IsRunning") == false) 
         {
             //rigidBodyComponent.AddForce(Vector3.right * Time.deltaTime * rotationSpeed, ForceMode.Force);
             transform.Rotate(transform.up * Time.deltaTime * rotationSpeed);
             //animator.SetBool("IsWalking", false);
 
         }
-        if(isRotatingLeft) 
+        if(isRotatingLeft && animator.GetBool("IsRunning") == false) 
         {
             //rigidBodyComponent.AddForce(Vector3.left * Time.deltaTime * -rotationSpeed, ForceMode.Force);
             transform.Rotate(transform.up * Time.deltaTime * -rotationSpeed);
@@ -47,7 +50,7 @@ public class AiMovementScript : MonoBehaviour
         }
 
         
-        if(isWalking)
+        if(isWalking && animator.GetBool("IsRunning") == false)
         {
         
             rigidBodyComponent.AddForce(transform.forward * movementSpeeed); 
@@ -63,6 +66,12 @@ public class AiMovementScript : MonoBehaviour
            // Debug.Log("isWalking false");
         }
 
+        if(isEating){
+            animator.SetBool("IsEating", true);
+        } else {
+            animator.SetBool("IsEating", false);
+        }
+
 
     }
 
@@ -71,24 +80,23 @@ public class AiMovementScript : MonoBehaviour
         int rotationWait = Random.Range(1, 3);
         int rotationDirection = Random.Range(1, 3);
         int walkWait = Random.Range(1,20);
-        int walkTime = Random.Range(10,20);
+        int eatWait = Random.Range(1,5);
+        int walkTime = Random.Range(3,10);
 
         isWandering = true;
+        int eatOrNot = Random.Range(1, 3);
+        if(eatOrNot == 1){
+            isEating = true;
+        }
+        yield return new WaitForSeconds(eatWait);
+        isEating =false;
 
         yield return new WaitForSeconds(walkWait);
         isWalking = true;
-        Debug.Log("isWalking true");
-        animator.SetBool("IsWalking", true);
+        //Debug.Log("isWalking true");
+
+        //animator.SetBool("IsWalking", true);
         yield return new WaitForSeconds(walkTime);
-
-        isWalking = false;
-        Debug.Log("isWalking false");
-        animator.SetBool("IsWalking", false);
-        
-        
-        yield return new WaitForSeconds(rotationWait);
-
-
         if(rotationDirection == 1){
             isRotatingLeft = true;
             yield return new WaitForSeconds(rotationTime);
@@ -102,6 +110,15 @@ public class AiMovementScript : MonoBehaviour
             isRotatingRight = false;
         }
 
+        isWalking = false;
+        Debug.Log("isWalking false");
+        animator.SetBool("IsWalking", false);
+        
+        
+        //yield return new WaitForSeconds(rotationWait);
+
+
+        
         isWandering = false;
 
     }
