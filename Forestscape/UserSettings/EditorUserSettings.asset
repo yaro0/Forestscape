@@ -6,6 +6,7 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
+<<<<<<< HEAD
       value: 2242470311464672001e0330043010210316163e3925660428225200ebed2434e7a71bece92f700f3a07e13917713236ff1a050eb6260b021f4ed00b1fea503714c8178b0fc61608d2
       flags: 0
     RecentlyUsedScenePath-1:
@@ -13,11 +14,21 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c721f03015878627868252320092a
+=======
+      value: 2242470311464668190f1e3615317e0305120c3963012823282a0920adc2212cf6e224efeb237f74180ce631052a043bbb452d0efb044a38120bf30b5edb151e1efa3ad00edc1a0ecd150580d813d8f7cc
+      flags: 0
+    RecentlyUsedScenePath-1:
+      value: 22424703114646680e0b0227036c681f041c1a2f222b2e7e38271427fb
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+>>>>>>> parent of 30ba7de (try to import an book)
       flags: 0
     RecentlyUsedScenePath-3:
       value: 22424703114646680e0b0227036c721f0012152f223c12353e3d2e30e7ee3176f7e93ffdfe
       flags: 0
     RecentlyUsedScenePath-4:
+<<<<<<< HEAD
       value: 22424703114646680e0b0227036c681f041c1a2f222b2e7e38271427fb
       flags: 0
     RecentlyUsedScenePath-5:
@@ -31,6 +42,21 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-8:
       value: 22424703114646680e0b0227036c7c1104191d3e623d28393930
+=======
+      value: 22424703114646680e0b0227036c72111f192b292926237e38271427fb
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 224247031146467d0c1b022331304c150204570b080f190428310926f0e52777c6e23be6a81e3a313631ec390a3b4f2afc031d12
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 22424703114646790201076f2022581556340d38206703282c240d3fe7af273be7e933faa81f273d3412e3393b6f3e1df3190008b62905041a40e80018eb09
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646790201076f2022581556340d38206703282c240d3fe7af273be7e933faa81f273d3412e3393b6d3e08fd18050fc51b0b081440e80018eb09
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646790201076f2022581556340d38206703282c240d3fe7af273be7e933faa81f273d3412e3393b6c3e1cfd041d19f9070f0f5128f10701ef191d168b0dcb13dc06
+>>>>>>> parent of 30ba7de (try to import an book)
       flags: 0
     RecentlyUsedScenePath-9:
       value: 22424703114646680e0b0227036c72111f192b292926237e38271427fb
