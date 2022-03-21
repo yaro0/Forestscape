@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Forestscape/Assets/Materials/Light.mat.meta
+guid: 0aca717437b2fba4aa5e5c87c1565a43
+NativeFormatImporter:
+=======
 guid: 47d67705beabd364cb01a2b843cacba6
 DefaultImporter:
+>>>>>>> f67a764fff8945264205392619b7536c3316c1a1:Forestscape/Assets/Imports/Clean Vector Icons/Demo.unity.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
