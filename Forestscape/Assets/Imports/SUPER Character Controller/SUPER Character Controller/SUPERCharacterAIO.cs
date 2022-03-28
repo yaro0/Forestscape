@@ -102,11 +102,11 @@ public class SUPERCharacterAIO : MonoBehaviour{
     [Range(1.0f,650.0f)]public float walkingSpeed = 140, sprintingSpeed = 260, crouchingSpeed = 45;
     [Range(1.0f,400.0f)] public float decelerationSpeed=240;
     #if ENABLE_INPUT_SYSTEM
-    public Key sprintKey = Key.LeftShift, crouchKey = Key.LeftCtrl, slideKey = Key.V;
+    public Key sprintKey = Key.LeftShift, crouchKey = Key.LeftCtrl, slideKey = Key.V, photoKey = Key.C;
     #else
-    public KeyCode sprintKey_L = KeyCode.LeftShift, crouchKey_L = KeyCode.LeftControl, slideKey_L = KeyCode.V;
+    public KeyCode sprintKey_L = KeyCode.LeftShift, crouchKey_L = KeyCode.LeftControl, slideKey_L = KeyCode.V, photoKey_L = KeyCode.C;
     #endif
-    public bool canSprint=true, isSprinting, toggleSprint, sprintOveride, canCrouch=true, isCrouching, toggleCrouch, crouchOverride, isIdle;
+    public bool canSprint=true, isSprinting, toggleSprint, sprintOveride, canCrouch=true, isCrouching, toggleCrouch, crouchOverride, isIdle, changeChar = false;
     public Stances currentStance = Stances.Standing;
     public float stanceTransitionSpeed = 5.0f, crouchingHeight = 0.80f;
     public GroundSpeedProfiles currentGroundMovementSpeed = GroundSpeedProfiles.Walking;
@@ -149,7 +149,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
     PhysicMaterial _ZeroFriction, _MaxFriction;
     CapsuleCollider capsule;
     Rigidbody p_Rigidbody;
-    bool crouchInput_Momentary, crouchInput_FrameOf, sprintInput_FrameOf,sprintInput_Momentary, slideInput_FrameOf, slideInput_Momentary;
+    bool crouchInput_Momentary, crouchInput_FrameOf, sprintInput_FrameOf,sprintInput_Momentary, slideInput_FrameOf, slideInput_Momentary, photoInput_FrameOf, photoInput_Momentary;
 
     //Slope Affectors
 
@@ -415,6 +415,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
     }
     void Update(){
 
+
         #region Input
         #if ENABLE_INPUT_SYSTEM
             MouseXY.x = Mouse.current.delta.y.ReadValue()/50;
@@ -435,6 +436,10 @@ public class SUPERCharacterAIO : MonoBehaviour{
              if(sprintKey!=Key.None){
                 sprintInput_Momentary = Keyboard.current[sprintKey].isPressed;
                 sprintInput_FrameOf = Keyboard.current[sprintKey].wasPressedThisFrame;
+             }
+             if (photoKey != Key.None){ 
+                photoInput_Momentary = Keyboard.current[photoKey].isPressed;
+                photoInput_FrameOf = Keyboard.current[photoKey].wasPressedThisFrame;
              }
              if(slideKey != Key.None){
                 slideInput_Momentary = Keyboard.current[slideKey].isPressed;
@@ -460,6 +465,8 @@ public class SUPERCharacterAIO : MonoBehaviour{
             crouchInput_FrameOf = Input.GetKeyDown(crouchKey_L);
             sprintInput_Momentary = Input.GetKey(sprintKey_L);
             sprintInput_FrameOf = Input.GetKeyDown(sprintKey_L);
+            photoInput_Momentary = Input.GetKey(photoKey_L);
+            photoInput_FrameOf = Input.GetKey(photoKey_L);
             slideInput_Momentary = Input.GetKey(slideKey_L);
             slideInput_FrameOf = Input.GetKeyDown(slideKey_L);
             #if SAIO_ENABLE_PARKOUR
@@ -535,10 +542,10 @@ public class SUPERCharacterAIO : MonoBehaviour{
         InputDir = cameraPerspective == PerspectiveModes._1stPerson?  Vector3.ClampMagnitude((transform.forward*MovInput.y+transform.right * (viewInputMethods == ViewInputModes.Traditional ? MovInput.x : 0)),1) : Quaternion.AngleAxis(HeadRotDirForInput,Vector3.up) * (Vector3.ClampMagnitude((Vector3.forward*MovInput_Smoothed.y+Vector3.right * MovInput_Smoothed.x),1));
         GroundMovementSpeedUpdate();
         if(canJump && (holdJump? jumpInput_Momentary : jumpInput_FrameOf)){Jump(jumpPower);}
-        #endregion
-        
+            #endregion
+
         #region Stamina system
-        if(enableStaminaSystem){CalculateStamina();}
+            if (enableStaminaSystem){CalculateStamina();}
         #endregion
 
         #region Footstep
@@ -559,7 +566,10 @@ public class SUPERCharacterAIO : MonoBehaviour{
 
         #region Animation
         UpdateAnimationTriggers();
-        #endregion
+            #endregion
+
+
+            OpenCamera();
     }
     void FixedUpdate() {
 
@@ -582,9 +592,21 @@ public class SUPERCharacterAIO : MonoBehaviour{
         other.GetComponent<ICollectable>()?.Collect();
         #endregion
     }
- 
+
+    #region Taking Photos
+
+        void OpenCamera()
+        {
+            if (photoInput_Momentary)
+            {
+                Debug.Log("C was pressed");
+            }
+        }
+
+        #endregion
+
     #region Camera Functions
-    void RotateView(Vector2 yawPitchInput, float inputSensitivity, float cameraWeight){
+        void RotateView(Vector2 yawPitchInput, float inputSensitivity, float cameraWeight){
         
         switch (viewInputMethods){
             
