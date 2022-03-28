@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [ExecuteAlways]
 public class LightingManager : MonoBehaviour
@@ -10,6 +11,10 @@ public class LightingManager : MonoBehaviour
     [SerializeField] private LightingPresets Preset;
     //Variables
     [SerializeField, Range(0,24)] private float TimeOfDay;
+
+    [SerializeField]
+    private TextMeshProUGUI timeText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +24,8 @@ public class LightingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        updateTimeOfDayText();
+
         if(Preset == null)
         {
             return;
@@ -34,6 +41,7 @@ public class LightingManager : MonoBehaviour
         {
             UpdateLighting(TimeOfDay / 24f);
         }
+
     }
 
     private void UpdateLighting(float timePercent)
@@ -71,4 +79,20 @@ public class LightingManager : MonoBehaviour
             }
         }
     }
+
+    private void updateTimeOfDayText()
+    {
+        if (timeText != null)
+        {
+            System.TimeSpan time = System.TimeSpan.FromHours(TimeOfDay);
+            timeText.text = time.ToString("hh':'mm");//Hour, minutes
+        }
+    }
+
+[SerializeField]
+    public float getTimeOfDay()
+    {
+        return TimeOfDay;
+    }
+    
 }
