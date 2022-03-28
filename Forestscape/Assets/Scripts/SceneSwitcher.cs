@@ -7,11 +7,13 @@ public class SceneSwitcher : MonoBehaviour
 {
     public void GotoMenuScene()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
+        //SceneManager.SetActiveScene(SceneManager.GetActiveScene());
     }
 
     public void GoToCraftingScene()
     {
-        SceneManager.LoadScene("Workbench");
+        SceneManager.LoadScene(1);
+        //SceneManager.SetActiveScene(SceneManager.GetActiveScene());
     }
 }

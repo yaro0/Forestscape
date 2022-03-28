@@ -252,7 +252,7 @@ MonoBehaviour:
   crosshairSprite: {fileID: 0}
   cameraPerspective: 0
   automaticallySwitchPerspective: 0
-  perspectiveSwitchingKey_L: 0
+  perspectiveSwitchingKey: 31
   mouseInputInversion: 0
   Sensitivity: 2
   rotationWeight: 4
@@ -274,9 +274,9 @@ MonoBehaviour:
   sprintingSpeed: 240
   crouchingSpeed: 55
   decelerationSpeed: 240
-  sprintKey_L: 304
-  crouchKey_L: 306
-  slideKey_L: 118
+  sprintKey: 51
+  crouchKey: 55
+  slideKey: 36
   canSprint: 1
   isSprinting: 0
   toggleSprint: 0
@@ -301,7 +301,7 @@ MonoBehaviour:
   holdJump: 1
   jumpEnhancements: 0
   Jumped: 0
-  jumpKey_L: 32
+  jumpKey: 1
   jumpPower: 100
   airControlFactor: 1
   decentMultiplier: 2.5
@@ -365,7 +365,7 @@ MonoBehaviour:
     hasLowHealth: 0
     isStarving: 0
     isDehydrated: 0
-  interactKey_L: 101
+  interactKey: 19
   interactRange: 2.4
   interactableLayer:
     serializedVersion: 2
