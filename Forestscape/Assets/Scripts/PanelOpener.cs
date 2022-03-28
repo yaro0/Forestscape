@@ -8,8 +8,6 @@ public class PanelOpener : MonoBehaviour
     
     public void OpenPanel()
     {
-        //GameManager.instance.sante;
-
         if (Panel != null)
         {
             bool isActive = Panel.activeSelf;
