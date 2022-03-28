@@ -45,7 +45,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
     public float Sensitivity = 8;
     public float rotationWeight = 4;
     public float verticalRotationRange = 170.0f;
-    public float eyeHeight = 0.8f;
+    public float eyeHeight = 5.0f;
 
     //First person
     public ViewInputModes viewInputMethods;
