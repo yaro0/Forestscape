@@ -1,0 +1,7 @@
+Asset uses in package: 
+
+- DOTween under DOTween License © 2014
+License file location: UnityTech > UIGuide > Addons > DOTween > readme.txt
+
+- Baloo Tammudu 2 under the SIL OFL, Version 1.1 2007. 
+License file location: UnityTech > UIGuide > Art > Font > Baloo_Tammudu_2
