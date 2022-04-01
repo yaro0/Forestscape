@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void GotoMenuScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(0);
+        //SceneManager.SetActiveScene(SceneManager.GetActiveScene());
+    }
+
+    public void GoToCraftingScene()
+    {
+        SceneManager.LoadScene(1);
+        //SceneManager.SetActiveScene(SceneManager.GetActiveScene());
     }
 }
