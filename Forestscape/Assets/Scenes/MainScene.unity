@@ -390,11 +390,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: eyeHeight
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: FOVKickAmount
-      value: 5.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6161035176913595278, guid: d88f9942edcc77141a993df99c7e62b0, type: 3}
       propertyPath: drawPrimitiveUI
