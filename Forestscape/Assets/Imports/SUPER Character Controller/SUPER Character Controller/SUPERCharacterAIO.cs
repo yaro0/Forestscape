@@ -21,10 +21,13 @@ using UnityEngine.InputSystem.Interactions;
 namespace SUPERCharacter{
 [RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(CapsuleCollider))][AddComponentMenu("SUPER Character/SUPER Character Controller")]
 public class SUPERCharacterAIO : MonoBehaviour{
-    #region Variables
+        #region Variables
 
-    #region Camera Settings
-    [Header("Camera Settings")]
+        bool photomode = false;
+
+
+        #region Camera Settings
+        [Header("Camera Settings")]
     //
     //Public
     //
@@ -597,10 +600,16 @@ public class SUPERCharacterAIO : MonoBehaviour{
 
         void OpenCamera()
         {
-            if (photoInput_Momentary)
-            {
-                Debug.Log("C was pressed");
+
+            if (photoInput_Momentary && !photomode)
+            { 
+                Debug.Log("Photo mode on");
+                canJump = false;
+                canSprint = false;
+                photomode = true;
             }
+
+            
         }
 
         #endregion
