@@ -25,7 +25,6 @@ public class SUPERCharacterAIO : MonoBehaviour{
 
         bool photomode = false;
 
-
         #region Camera Settings
         [Header("Camera Settings")]
     //
@@ -602,7 +601,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
         {
 
             if (photoInput_Momentary && !photomode)
-            { 
+            {
                 Debug.Log("Photo mode on");
                 canJump = false;
                 canSprint = false;
