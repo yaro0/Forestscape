@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &377209874
 Transform:
   m_ObjectHideFlags: 0
@@ -1477,6 +1477,7 @@ MonoBehaviour:
   photoFrame: {fileID: 436902728}
   fadingAnimation: {fileID: 450844040}
   cameraFrame: {fileID: 377209873}
+  photoMode: 1
 --- !u!1 &1611756937
 GameObject:
   m_ObjectHideFlags: 0
