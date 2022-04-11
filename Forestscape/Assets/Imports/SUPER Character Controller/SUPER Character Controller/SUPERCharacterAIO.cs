@@ -23,8 +23,6 @@ namespace SUPERCharacter{
 public class SUPERCharacterAIO : MonoBehaviour{
         #region Variables
 
-        bool photomode = false;
-
         #region Camera Settings
         [Header("Camera Settings")]
     //
@@ -570,8 +568,14 @@ public class SUPERCharacterAIO : MonoBehaviour{
         UpdateAnimationTriggers();
             #endregion
 
-
-            OpenCamera();
+            if (photoInput_Momentary)
+            {
+                OpenCamera();
+            }
+            if (GetComponent<PhotoCapture>().photoMode == false)
+            {
+                CloseCamera();
+            }
     }
     void FixedUpdate() {
 
@@ -600,15 +604,19 @@ public class SUPERCharacterAIO : MonoBehaviour{
         void OpenCamera()
         {
 
-            if (photoInput_Momentary && !photomode)
-            {
-                Debug.Log("Photo mode on");
-                canJump = false;
-                canSprint = false;
-                photomode = true;
-            }
-
+            Debug.Log("Photo mode on");
+            canJump = false;
+            canSprint = false;
+            GetComponent<PhotoCapture>().photoMode = true;
             
+        }
+
+        void CloseCamera()
+        {
+            Debug.Log("Photo mode off");
+            canJump = true;
+            canSprint = true;
+
         }
 
         #endregion
