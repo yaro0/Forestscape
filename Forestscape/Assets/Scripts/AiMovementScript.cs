@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 //https://youtu.be/Zjlg9F3FRJs
 
@@ -18,7 +19,11 @@ public class AiMovementScript : MonoBehaviour
     private bool isWalking = false;
     private bool isEating = false;
 
+    private NavMeshAgent agent;
 
+    public GameObject middleOfarea;
+    public float roamRadius;
+    private float distanceRemain;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,15 +31,22 @@ public class AiMovementScript : MonoBehaviour
         rigidBodyComponent = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         System.Console.Write("isWalking false");
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = 1;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isWandering == false && animator.GetBool("IsRunning") == false){
-            StartCoroutine(Wander());
+        distanceRemain = agent.remainingDistance;
+
+
+        if (isWandering == false && animator.GetBool("IsRunning") == false){
+            StartCoroutine(FreeRoam());
         }
 
+        /*
         if(isRotatingRight && animator.GetBool("IsRunning") == false) 
         {
             //rigidBodyComponent.AddForce(Vector3.right * Time.deltaTime * rotationSpeed, ForceMode.Force);
@@ -48,12 +60,12 @@ public class AiMovementScript : MonoBehaviour
             transform.Rotate(transform.up * Time.deltaTime * -rotationSpeed);
             //animator.SetBool("IsWalking", false);
         }
-
+        */
         
         if(isWalking && animator.GetBool("IsRunning") == false)
         {
         
-            rigidBodyComponent.AddForce(transform.forward * movementSpeeed); 
+            //rigidBodyComponent.AddForce(transform.forward * movementSpeeed); 
             animator.SetBool("IsWalking", true);
            
            // Debug.Log("isWalking true");
@@ -74,6 +86,58 @@ public class AiMovementScript : MonoBehaviour
 
 
     }
+
+    void Wander2()
+    {
+        Vector3 randomDirection = Random.insideUnitSphere * roamRadius;
+        randomDirection += middleOfarea.transform.position;
+        NavMeshHit hit;
+        NavMesh.SamplePosition(randomDirection, out hit, roamRadius, 1);
+        Vector3 finalPosition = hit.position;
+        agent.destination = finalPosition;
+
+    }
+
+    IEnumerator FreeRoam()
+    {
+        int eatWait = Random.Range(1, 5);
+        int walkWait = Random.Range(1, 20);
+
+        isWandering = true;
+        
+        int eatOrNot = Random.Range(1, 3);
+        if (eatOrNot == 1)
+        {
+            isEating = true;
+        }
+        yield return new WaitForSeconds(eatWait);
+        isEating = false;
+        yield return new WaitForSeconds(walkWait);
+
+        
+        isWalking = true;
+        
+        Wander2();
+        yield return new WaitForSeconds(1);
+        //float distanceRemain = agent.remainingDistance;
+        Debug.Log(distanceRemain);
+        yield return new WaitUntil(() => distanceRemain == 0);
+        if (distanceRemain == 0)
+        {
+          isWalking = false;  
+        }
+
+        Debug.Log(distanceRemain);
+
+        isWandering = false;
+
+    }
+
+    IEnumerator waitUntilEndWalk()
+    {
+        yield return new WaitUntil(() => distanceRemain == 0);
+    }
+     
 
     IEnumerator Wander(){
         int rotationTime = Random.Range(1, 3);
