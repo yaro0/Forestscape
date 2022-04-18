@@ -214,7 +214,6 @@ GameObject:
   - component: {fileID: 633854290}
   - component: {fileID: 633854289}
   - component: {fileID: 633854288}
-  - component: {fileID: 633854291}
   - component: {fileID: 633854292}
   m_Layer: 5
   m_Name: ButtonExit
@@ -289,14 +288,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 633854292}
         m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: GotoMenuScene
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &633854289
@@ -337,18 +336,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633854286}
   m_CullTransparentMesh: 1
---- !u!114 &633854291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633854286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 101b05855d405ed47bff4bc8c72dba76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &633854292
 MonoBehaviour:
   m_ObjectHideFlags: 0
