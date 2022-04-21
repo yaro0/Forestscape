@@ -9,7 +9,7 @@ public class PhotoCapture : MonoBehaviour
     [Header("Photo Taker")]
     [SerializeField] private Image photoDisplayArea;
 
-    [SerializeField] private Image test;
+    //[SerializeField] private Image test;
     [SerializeField] private GameObject photoFrame;
 
     [Header("Photo Fader Effect")]
@@ -51,9 +51,11 @@ public class PhotoCapture : MonoBehaviour
     private void Update()
     {
         //Temporary
+        /*
         if (Input.GetKeyDown(KeyCode.S)){
             SceneManager.LoadScene("AnimalInfo");
         }
+        */
 
 
         if (photoMode == true)
@@ -130,7 +132,7 @@ public class PhotoCapture : MonoBehaviour
                 Texture2D animalCapture0 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture0);
                 animalPictures.Photos[0] = Sprite.Create(animalCapture0, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                test.sprite = animalPictures.Photos[0];
+                //test.sprite = animalPictures.Photos[0];
                 Debug.Log("Yes");
                 break;
             case "Rabbit":
