@@ -20,9 +20,6 @@ public class PhotoCapture : MonoBehaviour
 
     [SerializeField] PicturesObject animalPictures;
 
-    [Header("Crosshair")]
-    [SerializeField] private GameObject crosshair;
-
     private Texture2D screenCapture;
     private bool viewingPhoto;
     public bool photoMode = false;
@@ -67,7 +64,6 @@ public class PhotoCapture : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                crosshair.SetActive(false);
                 if (!viewingPhoto)
                 {  
                     checkWhatHit();
@@ -106,7 +102,6 @@ public class PhotoCapture : MonoBehaviour
 
             void RemovePhoto()
             {
-                crosshair.SetActive(true);
                 viewingPhoto = false;
                 photoFrame.SetActive(false);
                 cameraFrame.SetActive(false);
