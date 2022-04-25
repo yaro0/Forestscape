@@ -604,7 +604,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
         void OpenCamera()
         {
 
-            Debug.Log("Photo mode on");
+            //Debug.Log("Photo mode on");
             canJump = false;
             canSprint = false;
             GetComponent<PhotoCapture>().photoMode = true;
@@ -613,7 +613,7 @@ public class SUPERCharacterAIO : MonoBehaviour{
 
         void CloseCamera()
         {
-            Debug.Log("Photo mode off");
+            //Debug.Log("Photo mode off");
             canJump = true;
             canSprint = true;
 
