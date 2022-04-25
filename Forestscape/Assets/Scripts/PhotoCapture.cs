@@ -20,6 +20,9 @@ public class PhotoCapture : MonoBehaviour
 
     [SerializeField] PicturesObject animalPictures;
 
+    [Header("Crosshair")]
+    [SerializeField] private GameObject crosshair;
+
     private Texture2D screenCapture;
     private bool viewingPhoto;
     public bool photoMode = false;
@@ -29,7 +32,7 @@ public class PhotoCapture : MonoBehaviour
     private GameObject emptyObject;
 
     private RaycastHit hit;
-    
+
     [SerializeField]
     private Camera cam;
 
@@ -64,8 +67,9 @@ public class PhotoCapture : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                crosshair.SetActive(false);
                 if (!viewingPhoto)
-                {  
+                {
                     checkWhatHit();
                     StartCoroutine(CapturePhoto());
                 }
@@ -86,7 +90,7 @@ public class PhotoCapture : MonoBehaviour
 
                 screenCapture.ReadPixels(regionToRead, 0, 0, false);
                 screenCapture.Apply();
-                
+
                 sortPhoto(ShowPhoto());
 
             }
@@ -102,6 +106,7 @@ public class PhotoCapture : MonoBehaviour
 
             void RemovePhoto()
             {
+                crosshair.SetActive(true);
                 viewingPhoto = false;
                 photoFrame.SetActive(false);
                 cameraFrame.SetActive(false);
@@ -109,7 +114,7 @@ public class PhotoCapture : MonoBehaviour
 
             }
         }
-        
+
     }
 
     // https://answers.unity.com/questions/29764/how-can-i-check-when-the-centre-of-camera-is-looki.html
@@ -172,9 +177,10 @@ public class PhotoCapture : MonoBehaviour
         objectHit = emptyObject;
     }
 
-    void captureAnimal(Texture2D capture){
-         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
-                capture.ReadPixels(regionToRead, 0, 0, false);
-                capture.Apply();
+    void captureAnimal(Texture2D capture)
+    {
+        Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
+        capture.ReadPixels(regionToRead, 0, 0, false);
+        capture.Apply();
     }
 }
