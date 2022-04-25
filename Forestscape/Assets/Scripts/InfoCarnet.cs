@@ -10,5 +10,4 @@ public class InfoCarnet : ScriptableObject
     public string displayName;
     public Sprite icon;
     public string description;
-    public 
 }
