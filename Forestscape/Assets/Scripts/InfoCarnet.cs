@@ -4,7 +4,11 @@ using UnityEngine;
 
 
 
-public class InfoCarnet : MonoBehaviour
+public class InfoCarnet : ScriptableObject
 {
-    enum AnimalDescription{}
+    public string id;
+    public string displayName;
+    public Sprite icon;
+    public string description;
+    public 
 }
