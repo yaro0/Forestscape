@@ -4,10 +4,8 @@ using UnityEngine;
 
 
 
-public class InfoCarnet : ScriptableObject
+public class InfoCarnet : MonoBehaviour
 {
-    public string id;
-    public string displayName;
     public Sprite icon;
     public string description;
 }
