@@ -17,5 +17,9 @@ public class VirtualCursor : MonoBehaviour
         {
             Cursor.SetCursor(mouseCursor, hotSpot, cursorMode);
         }
+        else
+        {
+
+        }
     }
 }
