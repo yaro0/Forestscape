@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
+    [SerializeField] private KeyCode keycode;
+    [SerializeField] private string sceneName;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(keycode))
         {
-            GetComponent<SceneSwitcher>().LoadScene("AnimalInfo");
+            GetComponent<SceneSwitcher>().LoadScene(sceneName);
         }
     }
 

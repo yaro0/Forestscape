@@ -16,7 +16,7 @@ public class RunAway : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        agent.speed = 6;
+        agent.speed = 15;
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class RunAway : MonoBehaviour
         (distance < playerDistanceRun2 && UnityEngine.Input.GetKeyDown(KeyCode.LeftControl) == true)){
 
             Vector3 dirToPlayer = transform.position - player.transform.position;
-            Vector3 newPos = transform.position + dirToPlayer*2;
+            Vector3 newPos = transform.position + dirToPlayer*4;
         
             agent.SetDestination(newPos);
             //StartCoroutine(Run());

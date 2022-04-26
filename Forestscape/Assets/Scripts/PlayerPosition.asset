@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff108ee170202354ab64cb5f910542de, type: 3}
   m_Name: PlayerPosition
   m_EditorClassIdentifier: 
-  position: []
+  position:
+  - {x: 888.5635, y: 64.15016, z: 935.09174}

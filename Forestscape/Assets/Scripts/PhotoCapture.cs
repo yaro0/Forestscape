@@ -23,6 +23,8 @@ public class PhotoCapture : MonoBehaviour
     [Header("Crosshair")]
     [SerializeField] private GameObject crosshair;
 
+    [SerializeField] private PlayerCurrency money;
+
     private Texture2D screenCapture;
     private bool viewingPhoto;
     public bool photoMode = false;
@@ -134,8 +136,10 @@ public class PhotoCapture : MonoBehaviour
         switch (objectHit.tag)
         {
             case "Deer":
+                addMoney(0,50);
                 Texture2D animalCapture0 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture0);
+            
                 animalPictures.Photos[0] = Sprite.Create(animalCapture0, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 //test.sprite = animalPictures.Photos[0];
                 Debug.Log("Yes");
@@ -182,5 +186,14 @@ public class PhotoCapture : MonoBehaviour
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
         capture.ReadPixels(regionToRead, 0, 0, false);
         capture.Apply();
+    }
+
+    void addMoney(int i, int moneyAdded)
+    {
+        Debug.Log(animalPictures.Photos[i] != emptyObject);
+        if(animalPictures.Photos[i] == emptyObject || animalPictures.Photos[i] == null){
+            money.playerMoney += moneyAdded;
+            Debug.Log(money.playerMoney);
+        }  
     }
 }

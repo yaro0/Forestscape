@@ -127,7 +127,7 @@ public class AiMovementScript : MonoBehaviour
           isWalking = false;  
         }
 
-        Debug.Log(distanceRemain);
+        Debug.Log(distanceRemain + "ss");
 
         isWandering = false;
 

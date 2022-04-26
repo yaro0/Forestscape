@@ -8,11 +8,17 @@ using TMPro;
 public class WorkBenchManager : MonoBehaviour
 {
     public int[,] purchasableItems = new int[3,5];
-    public float money;
+    private float money;
+
+    public PlayerCurrency playerMoney;
     public TextMeshProUGUI moneyText;
+
+    public InventoryScript inventory;
     // Start is called before the first frame update
     void Start()
     {
+        money = playerMoney.Money;
+        
         moneyText.text = "Coins: " + money.ToString();
 
         //ID
@@ -39,7 +45,14 @@ public class WorkBenchManager : MonoBehaviour
       {
          money -= purchasableItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID];
          moneyText.text = "Coins: " + money.ToString();
+         activateUpgrade(ButtonRef);
+
       }
 
     }
+
+    public void activateUpgrade(GameObject button){
+      inventory.inventory[button.GetComponent<ButtonInfo>().ItemID] = true;
+    }
+
 }
