@@ -7,19 +7,18 @@ using UnityEngine.EventSystems;
 
 public class VirtualCursor : MonoBehaviour
 {
-    public Texture2D mouseCursor;
-    Vector2 hotSpot = new Vector2(0, 0);
-    CursorMode cursorMode = CursorMode.Auto;
+    //public Texture2D cursorTexture;
+    //public CursorMode cursorMode = CursorMode.Auto;
+    //public Vector2 hotSpot = Vector2.zero;
 
-    public void Start()
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt) | Input.GetKeyDown(KeyCode.RightAlt))
-        {
-            Cursor.SetCursor(mouseCursor, hotSpot, cursorMode);
-        }
-        else
-        {
+        Cursor.visible = false;
+    }
 
-        }
+    void Update()
+    {
+        Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = cursorPos;
     }
 }
