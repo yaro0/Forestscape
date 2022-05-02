@@ -354,7 +354,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Les escargots disposent d\u2019une ou deux paires de tentacules r\xE9tractiles.
+    La bordure situ\xE9e \xE0 l'ouverture de la coquille est appel\xE9e p\xE9ristome.
+    Quelle que soit son allure, la coquille de l'escargot est toujours h\xE9lico\xEFdale.
+    L'escargot se d\xE9place, seulement vers l'avant, gr\xE2ce \xE0 son pied, qui
+    est en fait un gigantesque muscle qui se contracte et s'allonge alternativement "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1040,7 +1044,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Le sanglier est une esp\xE8ce de mammif\xE8res omnivores. \xC0 l'approche
+    des humains, le sanglier prend g\xE9n\xE9ralement la fuite avant qu'on ne l'ait
+    d\xE9tect\xE9 et peut se montrer \xE9tonnamment agile et rapide. Il affectionne
+    particuli\xE8rement les zones arbor\xE9es disposant de points d'eau."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1922,7 +1929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ARAIGN\xC9E"
+  m_text: VEUVE NOIRE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2355,7 +2362,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Ce papillon \xE9tonne par les couleurs m\xE9talliques de ses ailes. L\u2019adulte
+    peut vivre jusqu\u2019\xE0 deux mois, et se nourrit principalement de jus de
+    fruits m\xFBrs. Il survole les cours d\u2019eau o\xF9 il a la place de voler
+    librement et o\xF9 il \xE9vite au maximum les pr\xE9dateurs. C\u2019est l\u2019un
+    des plus grands papillons existants avec 12 \xE0 30 cm d\u2019envergure. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2958,7 +2969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PERCA
+  m_text: PERCHAUDE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3092,7 +3103,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "L\u2019ours brun est une esp\xE8ce d\u2019ours qui peut atteindre une
+    masse corporelle de 130 \xE0 700 kg. Il a des fourrures dans les teintes blondes,
+    brunes, noires, ou une combinaison de ces couleurs. Leur t\xEAte est grande et
+    ronde avec un profil facial concave. Debout, l\u2019ours atteint une hauteur
+    de 1,5 \xE0 3,5 m\xE8tres. Malgr\xE9 leur taille, ils peuvent courir \xE0 des
+    vitesses allant jusqu\u2019\xE0 55 km/h."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3655,7 +3671,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "La ch\xE8vre des montagnes rocheuses d\xE9pend de la pr\xE9sence de falaises
+    et de pentes abrutes o\xF9 elle grimpe pour se mettre \xE0 l\u2019abri. En milieu
+    naturel, elles vivent g\xE9n\xE9ralement de 12 \xE0 15 ans. Leur longueur totale
+    varie entre 140 cm et 180 cm et ils p\xE8sent entre 60 et 115 kg. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3789,7 +3808,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Les motifs du monarque consistent en un fond orang\xE9, vein\xE9 et bord\xE9
+    de noir. Ce grand papillon est c\xE9l\xE8bre pour ses migrations de grande ampleur
+    en Am\xE9rique, o\xF9 il se d\xE9place par groupes de millions d\u2019individus
+    sur des distances pouvant atteindre 4000 km, deux fois par an, d\u2019ao\xFBt
+    \xE0 octobre vers le sud, et au printemps vers le nord. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4214,7 +4237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431.72, y: 3791}
+  m_AnchoredPosition: {x: -431.72, y: 3857}
   m_SizeDelta: {x: 507.3504, y: 116.7202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502720739
@@ -4237,7 +4260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "CH\xC8VRE"
+  m_text: "CH\xC8VRE DES MONTAGNES"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4371,7 +4394,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "La perchaude est une esp\xE8ce abondante dans les lacs et cours d\u2019eau.
+    La perchaude se nourrit principalement d\u2019insectes, de petits poissons, d\u2019\u0153ufs
+    et de crustac\xE9s. Son alimentation varie beaucoup en fonction de sa taille.
+    Son corps est allong\xE9 et ovale et sa longueur moyenne se situe entre 10 et
+    25 cm."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5070,7 +5097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PAPILLON BLEU
+  m_text: MORPHO BLEU
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5925,7 +5952,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "La grenouille des bois mesure 50 \xE0 70 mm, les femelles \xE9tant l\xE9g\xE8rement
+    plus grandes que les m\xE2les. Sa coloration varie avec des nuances de brun,
+    cr\xE8me et rouille, le ventre est clair dans les tons jaune ou gris. Elle se
+    reproduit dans des flaques d'eau temporaires et pond un millier d'\u0153ufs.
+    Les t\xEAtards se m\xE9tamorphosent \xE0 la fin de l'\xE9t\xE9."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7782,7 +7813,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "La veuve noire est une esp\xE8ce d\u2019araign\xE9es de petite taille,
+    la longueur du corps est de 15 mm chez les femelles et de 7 \xE0 9 mm chez les
+    m\xE2les. On attribue son nom au fait que la femelle mange le m\xE2le apr\xE8s
+    l\u2019accouplement. Elle d\xE9vore exceptionnellement le m\xE2le lorsque les
+    ressources nutritives du milieu sont quasi-nulles. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8006,7 +8041,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "VIP\xC8RE"
+  m_text: "VIP\xC8RE ASPIC"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8192,7 +8227,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431.72, y: 3833}
+  m_AnchoredPosition: {x: -431.72, y: 3857}
   m_SizeDelta: {x: 507.3504, y: 116.7202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972329963
@@ -8692,7 +8727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MONARCH
+  m_text: MONARQUE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8866,7 +8901,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Le Loup est le plus grand repr\xE9sentant de la famille du chien. Le Loup
+    vit en bande de trois \xE0 sept individus parmi lesquels on compte un m\xE2le
+    dominant et sa louve reproductrice. Le Loup a une nature timide et il est habituellement
+    nocturne et insaisissable. Il chasse le cerf, le caribou, l'orignal, le wapiti
+    et, pendant l'\xE9t\xE9, du gibier de plus petite taille."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10150,7 +10189,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "La bernache est une oie sauvage dont le plumage est noir brun, sauf son
+    ventre et son collier qui sont blanc. Elle construit souvent son nid sur le sol,
+    pr\xE8s de l\u2019eau. Cet oiseau migrateur se nourrit de grains de ma\xEFs,
+    de bl\xE9 et autres c\xE9r\xE9ales. Dans la nature, la dur\xE9e de vie de la
+    bernache est de 23 ans. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10710,7 +10753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431.72, y: 3813}
+  m_AnchoredPosition: {x: -431.72, y: 3857}
   m_SizeDelta: {x: 507.3504, y: 116.7202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371309501
@@ -11509,7 +11552,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "La vip\xE8re aspic est un serpent venimeux, qui utilise son venin principalement
+    pour tuer ses proies, mais qui peut aussi l\u2019utiliser pour se d\xE9fendre,
+    parfois contre les humains. C\u2019est un serpent de taille petite \xE0 moyenne,
+    avec un corps assez \xE9pais et une queue courte. Adulte, elle mesure entre 50
+    et 70 cm mais peut atteindre 90 cm. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12393,7 +12440,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Les scorpions ont 8 pattes et une paire d\u2019appendices ant\xE9rieurs
+    appel\xE9s p\xE9dipalpes. Ils ont aussi une longue \xAB queue \xBB au bout de
+    laquelle se trouve le telson, un organe de d\xE9fense muni d\u2019un aiguillon.
+    Les scorpions comptent parmi les plus anciens animaux terrestres, comme en t\xE9moignent
+    des fossiles vieux de 400 millions d\u2019ann\xE9es."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12751,7 +12802,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Avec ses couleurs noires et jaunes, la salamandre tachet\xE9e ne peut
+    \xEAtre confondue avec aucune autre esp\xE8ce. Grosse consommatrice de limace,
+    elle est totalement inoffensive pour les humains. Elle est active au cr\xE9puscule
+    et la nuit, mais se rencontre pargois le jour apr\xE8s une pluie abondante. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13192,7 +13246,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Les li\xE8vres sont des petits mammif\xE8res herbivores, proches. Ils
+    poss\xE8dent de longues pattes post\xE9rieures, tr\xE8s muscl\xE9es qui leur
+    permettent de se propulse en bonds tr\xE8s rapides lorsque c\u2019est n\xE9cessaire.
+    Il peut ainsi se d\xE9placer \xE0 une vitesse de 60 km/h en moyenne et peut aussi
+    faire des bonds de 2 m\xE8tres \xE0 la verticale. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13655,7 +13713,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OIE
+  m_text: BERNACHE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14034,7 +14092,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "La sardine est un poisson qui vit en plein eau, de la c\xF4te jusqu\u2019au
+    large, entre la surface et 100 m de profondeur environ. Ce poisson peut se reproduire
+    toute l\u2019ann\xE9e est pondre entre 50 000 et 60 000 \u0153ufs qui remontent
+    \xE0 la surface et seront port\xE9s par le courant. Une fois f\xE9cond\xE9s,
+    les \u0153ufs \xE9closent au bout de 2 \xE0 4 jours pour donner une larve de
+    4 mm en moyenne. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15303,7 +15366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431.72, y: 3791}
+  m_AnchoredPosition: {x: -431.72, y: 3857}
   m_SizeDelta: {x: 507.3504, y: 116.7202}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029236675
@@ -15326,7 +15389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SALAMANDRE
+  m_text: "SALAMANDRE TACHET\xC9E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15550,7 +15613,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Le Grand brochet est une esp\xE8ce de poissons pr\xE9dateurs dont les
+    flancs de couleur verd\xE2tre ou jaun\xE2tre vers le dos deviennent blancs vers
+    le ventre. Les nageoires sont de couleurs rouge-orange et portent des rayures
+    sombres. Ce poisson \xE0 environ 500 dents. Le Grand brochet fait partie des
+    poissons d\u2019eau douce ayant la plus vaste r\xE9partition naturelle au monde. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15849,7 +15916,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INFO
+  m_text: "Le crabe est une esp\xE8ce qui fait partie de la famille des crustac\xE9s.
+    Ces animaux invert\xE9br\xE9s poss\xE8dent 5 paires de pattes dont la premi\xE8re
+    en forme des pinces. Les crabes sont utiles car ils nettoient le sable, mais
+    par contre ils agressent les jeunes tortues et leurs \u0153ufs. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
