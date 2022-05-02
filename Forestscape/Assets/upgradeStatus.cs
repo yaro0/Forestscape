@@ -22,6 +22,7 @@ public class upgradeStatus : MonoBehaviour
     }
 
     void checkIfActive(){
+        Debug.Log(inventory.inventory[id]);
         if(inventory.inventory[id].Equals(true)){
             goodBridge.SetActive(true);
             brokenBridge.SetActive(false);
