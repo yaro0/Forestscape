@@ -5,14 +5,14 @@ using UnityEngine;
 public class DoorThatWorks : MonoBehaviour
 {
     public bool IsOpen = false;
-    [SerializeField]
+    
     private bool IsRotatingDoor = true;
-    [SerializeField]
+   
     private float Speed = 1f;
     //[Header("Rotation configs")]
-    [SerializeField]
+    
     private float RotationAmount = 90f;
-    [SerializeField]
+    
     private float ForwardDirection = 0;
 
     private Vector3 StartRotation;
