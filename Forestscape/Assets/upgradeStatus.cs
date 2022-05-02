@@ -26,6 +26,6 @@ public class upgradeStatus : MonoBehaviour
         if(inventory.inventory[id].Equals(true)){
             goodBridge.SetActive(true);
             brokenBridge.SetActive(false);
-        }
+        } 
     }
 }
