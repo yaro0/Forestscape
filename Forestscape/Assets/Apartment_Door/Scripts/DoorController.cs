@@ -63,12 +63,13 @@ public class DoorController : MonoBehaviour
         //To Check if the player is in the zone
         if (playerInZone)
         {
+            Debug.Log("Dorr has been touched");
             if (doorState == DoorState.Opened)
             {
                 txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
                 doorCollider.enabled = false;
             }
-            else if (doorState == DoorState.Closed || gotKey)
+            else if (doorState == DoorState.Closed)//|| gotKey
             {
                 txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
                 doorCollider.enabled = true;

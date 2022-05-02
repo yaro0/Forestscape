@@ -802,6 +802,7 @@ GameObject:
   - component: {fileID: 8831103806409478175}
   - component: {fileID: 8831103806409478161}
   - component: {fileID: 8831103806409478174}
+  - component: {fileID: 5983542397042447791}
   - component: {fileID: 3390655020220431137}
   m_Layer: 2
   m_Name: CharacterWithPhotoScript
@@ -1107,6 +1108,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5983542397042447791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8831103806409478163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 150cf7940ab0e6c4bbaf184a87998a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNeeded: 0
+  gotKey: 0
+  keyGameObject: {fileID: 0}
+  txtToDisplay: {fileID: 0}
 --- !u!114 &3390655020220431137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,7 +1140,11 @@ MonoBehaviour:
   photoFrame: {fileID: 0}
   fadingAnimation: {fileID: 0}
   cameraFrame: {fileID: 3390655020570241146}
+  animalPictures: {fileID: 0}
+  crosshair: {fileID: 0}
+  money: {fileID: 0}
   photoMode: 1
+  cam: {fileID: 0}
 --- !u!1 &8831103806584783316
 GameObject:
   m_ObjectHideFlags: 0
