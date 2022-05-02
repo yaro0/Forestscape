@@ -6,6 +6,16 @@ using UnityEngine;
 
 public class InfoCarnet : MonoBehaviour
 {
-    public Sprite icon;
-    public string description;
+    public GameObject rawImage;
+    public GameObject txt;
+    public GameObject prefab;
+    private bool isDiscovered;
+
+    void afficherInfo()
+    {
+        if(isDiscovered)
+        {
+            //rawImage = rawImage.GetComponent<>();
+        }
+    }
 }
