@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Save
+public class Save : MonoBehaviour
 {
     
     List<GameObject> gameObjectSaved = new List<GameObject>();
     
-    public void Save()
+    public void Saving()
     {
-        Scene scene = SceneManager.GetSceneByName("MainScene");
-        scene.GetRootGameObjects(gameObjectSaved);
+
+        //Scene sceneMain = SceneManager.GetSceneByName("MainScene");
+        //sceneMain.GetRootGameObjects(gameObjectSaved);
     }
 }
