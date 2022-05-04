@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 4678938426711813890}
   - component: {fileID: 2031545885260594525}
   - component: {fileID: 7144407747842457607}
-  - component: {fileID: 7707510060064234717}
-  - component: {fileID: 4587935925213100431}
   - component: {fileID: 5395724564181800629}
+  - component: {fileID: 8337140018565312608}
   m_Layer: 0
   m_Name: wall_wood_door.001
   m_TagString: Untagged
@@ -84,34 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7707510060064234717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513843668485194119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d79b620c4231c0a4d892ebce0a6c74a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsOpen: 0
---- !u!114 &4587935925213100431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6513843668485194119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d6f2afb1869e24bb9f3efec81da8ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!65 &5395724564181800629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,3 +96,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23672271, y: 1.8342111, z: 0.7274456}
   m_Center: {x: 0.000000070780516, y: 0.07024342, z: -0.19038653}
+--- !u!111 &8337140018565312608
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6513843668485194119}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: e51e9254b8fe0a04e8a8a9f050b9224e, type: 2}
+  - {fileID: 7400000, guid: 3e9cf5ea7a6383943be16f1cd7842412, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
