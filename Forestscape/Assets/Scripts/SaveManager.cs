@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
+using UnityEditor;
 
 public class SaveManager : MonoBehaviour
 {
+    public SaveData saveData;
     void Start()
     {
         
@@ -22,7 +24,7 @@ public class SaveManager : MonoBehaviour
     
     public void Saving()
     {
-
+        saveData.createList();
         //Scene sceneMain = SceneManager.GetSceneByName("MainScene");
         //sceneMain.GetRootGameObjects(gameObjectSaved);
     }
@@ -33,9 +35,13 @@ public class SaveData : MonoBehaviour
     //public GameObject prefabsAnimals;
     List<GameObject> animalsList = new List<GameObject>();
 
-    private void createList()
+    public void createList()
     {
-        
+        //foreach (/*...*/)
+        //{
+            //animalsList.Add(go);
+            //Debug.Log(go.name);
+        //}
     }
 
 }
