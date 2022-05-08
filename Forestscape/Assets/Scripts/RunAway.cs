@@ -41,7 +41,7 @@ public class RunAway : MonoBehaviour
 
             if(distanceRemain <= 0){
                 agent.ResetPath();
-                Debug.Log("reset path");
+                //Debug.Log("reset path");
                 animator.SetBool("IsRunning", false);
             }
 

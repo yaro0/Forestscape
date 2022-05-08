@@ -132,7 +132,7 @@ public class PhotoCapture : MonoBehaviour
 
     void sortPhoto(Sprite sprite)
     {
-        Debug.Log(objectHit.tag);
+        //Debug.Log(objectHit.tag);
         switch (objectHit.tag)
         {
             case "Deer":
@@ -142,7 +142,7 @@ public class PhotoCapture : MonoBehaviour
             
                 animalPictures.Photos[0] = Sprite.Create(animalCapture0, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 //test.sprite = animalPictures.Photos[0];
-                Debug.Log("Yes");
+                //Debug.Log("Yes");
                 break;
             case "Rabbit":
                 Texture2D animalCapture1 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
@@ -190,10 +190,10 @@ public class PhotoCapture : MonoBehaviour
 
     void addMoney(int i, int moneyAdded)
     {
-        Debug.Log(animalPictures.Photos[i] != emptyObject);
+        //Debug.Log(animalPictures.Photos[i] != emptyObject);
         if(animalPictures.Photos[i] == emptyObject || animalPictures.Photos[i] == null){
             money.playerMoney += moneyAdded;
-            Debug.Log(money.playerMoney);
+            //Debug.Log(money.playerMoney);
         }  
     }
 }
