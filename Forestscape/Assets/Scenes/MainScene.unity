@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: {fileID: 11400000, guid: 9d6e09cfeded1394e8c3c36cfeca46f8, type: 2}
   id: 1
-  player: {fileID: 0}
+  player: {fileID: 1220427796}
 --- !u!1001 &2666064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42723,6 +42723,10 @@ PrefabInstance:
     - target: {fileID: 2270074733619296190, guid: d78188a04ae94fb418ca4acc157a8c3a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5811972480877615284, guid: d78188a04ae94fb418ca4acc157a8c3a, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7288188066145877438, guid: d78188a04ae94fb418ca4acc157a8c3a, type: 3}
       propertyPath: m_LocalPosition.x
