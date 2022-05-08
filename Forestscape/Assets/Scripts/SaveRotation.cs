@@ -11,13 +11,13 @@ public class SaveRotation : MonoBehaviour
     {
         if (rotation.Rotation[id] != null)
         {
-            transform.rotation = rotation.Rotation[id];
+            transform.eulerAngles = rotation.Rotation[id];
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        rotation.Rotation[id] = transform.rotation;
+        rotation.Rotation[id] = transform.eulerAngles;
     }
 }

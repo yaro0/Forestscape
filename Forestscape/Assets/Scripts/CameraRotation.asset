@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0c7c88e2ce87f4cacec8839e93c7d4, type: 3}
   m_Name: CameraRotation
   m_EditorClassIdentifier: 
-  rotation: []
+  rotation:
+  - {x: 350.97705, y: 28.232426, z: 0}

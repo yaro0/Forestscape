@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "RotationSave")]
 public class RotationSave : ScriptableObject
 {
-    [SerializeField] private Quaternion[] rotation;
+    [SerializeField] private Vector3[] rotation;
 
-    public Quaternion[] Rotation => rotation;
+    public Vector3[] Rotation => rotation;
 }

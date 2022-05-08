@@ -6,12 +6,14 @@ public class SavePosition : MonoBehaviour
 {
     [SerializeField] private PositionSave position;
     [SerializeField] private int id;
+    //[SerializeField] private Camera cam;
     // Start is called before the first frame update
     void Start()
     {
-        if(position.Position[id] != null)
+        if(position.Position[id] != null )
         {
             transform.position = position.Position[id];
+            //cam.transform.eulerAngles = position.Position[id +1];
         }
     }
 
@@ -19,5 +21,6 @@ public class SavePosition : MonoBehaviour
     void Update()
     {
         position.Position[id] = transform.position;
+        //position.Position[id + 1] = cam.transform.eulerAngles;  
     }
 }
