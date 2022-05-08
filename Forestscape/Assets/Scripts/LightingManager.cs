@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 [ExecuteAlways]
 public class LightingManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class LightingManager : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI timeText;
+    public Image img;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class LightingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        skipNight();
         updateTimeOfDayText();
 
         if(Preset == null)
@@ -33,7 +36,7 @@ public class LightingManager : MonoBehaviour
 
         if (Application.isPlaying)
         {
-            TimeOfDay += Time.deltaTime/100;
+            TimeOfDay += Time.deltaTime/50;
             TimeOfDay %= 24; //Clamp between 0-24
             UpdateLighting(TimeOfDay / 24f);
         }
@@ -43,6 +46,46 @@ public class LightingManager : MonoBehaviour
         }
 
     }
+
+    private void skipNight(){
+        if(TimeOfDay >= 22.99 ){
+            
+
+        StartCoroutine(FadeImage());
+        }
+
+        if(TimeOfDay >= 23.01 ){
+            TimeOfDay = 6;
+        }
+        
+    }
+
+    // source: https://forum.unity.com/threads/simple-ui-animation-fade-in-fade-out-c.439825/
+     IEnumerator FadeImage()
+    {
+        // fade from transparent to opaque
+        // loop over 1 second
+            for (float i = 0; i <= 2; i += Time.deltaTime)
+            {
+                // set color with i as alpha
+                img.color = new Color(0, 0, 0, i);
+
+                yield return null;
+            }
+            
+        // fade from opaque to transparent
+            // loop over 1 second backwards
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                // set color with i as alpha
+                img.color = new Color(0, 0, 0, i);
+
+                yield return null;
+            }
+           
+        
+    }
+    
 
     private void UpdateLighting(float timePercent)
     {

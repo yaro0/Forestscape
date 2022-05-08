@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CameraRotation
   m_EditorClassIdentifier: 
   rotation:
-  - {x: 350.97705, y: 28.232426, z: 0}
+  - {x: -0, y: 288.92657, z: 0}
+  - {x: 318.16818, y: 288.92657, z: -0.0000022916845}

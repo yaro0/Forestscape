@@ -6,18 +6,36 @@ public class SaveRotation : MonoBehaviour
 {
     [SerializeField] private RotationSave rotation;
     [SerializeField] private int id;
+    [SerializeField] GameObject player;
+    private bool rotationSet = false;
     // Start is called before the first frame update
     void Start()
     {
+        
         if (rotation.Rotation[id] != null)
         {
-            transform.eulerAngles = rotation.Rotation[id];
+            Debug.Log("yes");
+            player.transform.eulerAngles = rotation.Rotation[id];
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        rotation.Rotation[id] = transform.eulerAngles;
+        if (!rotationSet)
+        {
+            player.transform.eulerAngles = rotation.Rotation[id];
+            rotationSet = true;
+        }
+        
+
+        StartCoroutine(wait());
+
+        rotation.Rotation[id] = player.transform.eulerAngles;
+    }
+
+    IEnumerator wait(){
+
+       yield return new WaitForSeconds(1); 
     }
 }

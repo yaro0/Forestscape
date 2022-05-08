@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: PlayerPosition
   m_EditorClassIdentifier: 
   position:
-  - {x: 430.22638, y: 65.35429, z: 608.80676}
-  - {x: 322.08722, y: 202.75577, z: 0}
+  - {x: 454.93695, y: 66.7071, z: 604.87506}
