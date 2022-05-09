@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class MenuPrincipal : MonoBehaviour
 {
@@ -28,11 +29,14 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Exit()
     {
-        Application.Quit();
+        //Application.Quit();
         //UnityEditor.EditorApplication.isPlaying = false;
     }
 
-    //public void
+    public void saving()
+    {
+        save.saving();
+    }
 }
 
 public class Save
@@ -40,8 +44,23 @@ public class Save
     List<ScriptableObject> scripts = new List<ScriptableObject>();
     public void saving()
     {
-        scripts.AddRange(Resources.FindObjectsOfTypeAll<ScriptableObject>());
-        Debug.Log(scripts.ToString());
+        foreach (ScriptableObject script in Resources.FindObjectsOfTypeAll<ScriptableObject>())
+        {
+            if (AssetDatabase.
+                Contains(script))
+            {
+                scripts.Add(script);
+                Debug.Log(script.ToString());
+            }
+            
+            
+            
+        }
+        //foreach (Resources.FindObjectsOfTypeAll<ScriptableObject>())
+        //{
+            //scripts.Add()
+        //}
+        //scripts.Add(Resources.FindObjectsOfTypeAll<ScriptableObject>());
         //Scene scene = SceneManager.GetSceneByName("MainScene");
         //scene.GetRootGameObjects(gameObjectSaved);
     }
