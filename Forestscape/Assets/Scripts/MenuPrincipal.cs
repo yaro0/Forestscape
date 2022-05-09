@@ -35,11 +35,11 @@ public class MenuPrincipal : MonoBehaviour
 public class Save
 {
 
-    List<GameObject> gameObjectSaved = new List<GameObject>();
+    //List<GameObject> gameObjectSaved = new List<GameObject>();
 
-    public void Saving()
-    {
-        Scene scene = SceneManager.GetSceneByName("MainScene");
-        scene.GetRootGameObjects(gameObjectSaved);
-    }
+    //public void Saving()
+    //{
+        //Scene scene = SceneManager.GetSceneByName("MainScene");
+        //scene.GetRootGameObjects(gameObjectSaved);
+    //}
 }
