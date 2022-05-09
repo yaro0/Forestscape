@@ -123,7 +123,7 @@ public class PhotoCapture : MonoBehaviour
     void checkWhatHit()
     {
         Vector3 cameraCenter = cam.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, cam.nearClipPlane));
-        if (Physics.Raycast(cameraCenter, cam.transform.forward, out hit, 1000))
+        if (Physics.Raycast(cameraCenter, cam.transform.forward, out hit, 10000))
         {
             objectHit = hit.transform.gameObject;
         }
@@ -131,20 +131,20 @@ public class PhotoCapture : MonoBehaviour
     }
 
     void sortPhoto(Sprite sprite)
-    {
+    {Debug.Log(objectHit.tag);
         //Debug.Log(objectHit.tag);
         switch (objectHit.tag)
         {
-            case "Deer":
+            case "Goose":
                 addMoney(0,50);
                 Texture2D animalCapture0 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture0);
-            
+                
                 animalPictures.Photos[0] = Sprite.Create(animalCapture0, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 //test.sprite = animalPictures.Photos[0];
                 //Debug.Log("Yes");
                 break;
-            case "Rabbit":
+            case "Gooses":
                 Texture2D animalCapture1 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture1);
                 Sprite.Create(animalCapture1, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);

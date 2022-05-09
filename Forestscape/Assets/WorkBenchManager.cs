@@ -46,8 +46,9 @@ public class WorkBenchManager : MonoBehaviour
          money -= purchasableItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID];
          moneyText.text = "Coins: " + money.ToString();
          activateUpgrade(ButtonRef);
-
       }
+
+        playerMoney.Money.Equals(money);
 
     }
 
