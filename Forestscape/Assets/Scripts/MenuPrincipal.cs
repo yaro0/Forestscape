@@ -31,3 +31,15 @@ public class MenuPrincipal : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
     }
 }
+
+public class Save
+{
+
+    List<GameObject> gameObjectSaved = new List<GameObject>();
+
+    public void Saving()
+    {
+        Scene scene = SceneManager.GetSceneByName("MainScene");
+        scene.GetRootGameObjects(gameObjectSaved);
+    }
+}
