@@ -25,7 +25,8 @@ public class VideoTransition : MonoBehaviour
         print("Video Is Over");
         videoViewer.SetActive(false);
         vid.enabled = false;
-     
+
+        SceneManager.LoadScene("MainScene");
     }
 
 }
