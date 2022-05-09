@@ -40,16 +40,9 @@ public class PhotoCapture : MonoBehaviour
 
     private void Start()
     {
-        //cam = Camera.main;
 
-        emptyObject = new GameObject("Empty GameObject");
-        emptyObject.tag = "Empty";
-        objectHit = emptyObject;
-
-        if (photoMode == true)
-        {
-            screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        }
+        photoMode = false;
+        
 
     }
 
@@ -61,6 +54,17 @@ public class PhotoCapture : MonoBehaviour
             SceneManager.LoadScene("AnimalInfo");
         }
         */
+
+        if (photoMode == true)
+        {
+            //cam = Camera.main;
+
+            emptyObject = new GameObject("Empty GameObject");
+            emptyObject.tag = "Empty";
+            objectHit = emptyObject;
+
+            screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+        }
 
 
         if (photoMode == true)
