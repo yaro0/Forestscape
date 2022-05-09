@@ -46,27 +46,22 @@ public class Save
     {
         foreach (ScriptableObject script in Resources.FindObjectsOfTypeAll<ScriptableObject>())
         {
-            //if (AssetDatabase.AssetPathToGUID("Assets/Scripts") == script.) {
 
+            //if (AssetDatabase.AssetPathToGUID("Assets/Scripts") == AssetDatabase.GetAssetPath(script)) {
+            scripts.Add(script);
+            Debug.Log(script.name.ToString());
             //}
-            
-                //AssetDatabase.GetAssetPath(script) == "Assets/Scripts")
-                //AssetDatabase.FindAssets
-                //Contains(script))
-                scripts.Add(script);
-                Debug.Log(script.ToString());
-            
-            
-            
-            
-        }
-        //foreach (Resources.FindObjectsOfTypeAll<ScriptableObject>())
-        //{
+            //AssetDatabase.GetAssetPath(script) == "Assets/Scripts")
+            //AssetDatabase.FindAssets
+            //Contains(script))
+            //foreach (Resources.FindObjectsOfTypeAll<ScriptableObject>())
+            //{
             //scripts.Add()
-        //}
-        //scripts.Add(Resources.FindObjectsOfTypeAll<ScriptableObject>());
-        //Scene scene = SceneManager.GetSceneByName("MainScene");
-        //scene.GetRootGameObjects(gameObjectSaved);
+            //}
+            //scripts.Add(Resources.FindObjectsOfTypeAll<ScriptableObject>());
+            //Scene scene = SceneManager.GetSceneByName("MainScene");
+            //scene.GetRootGameObjects(gameObjectSaved);
+        }
     }
     
     //scriptableObject = Resources.Load<SomeScriptableObject>("AssetName");
