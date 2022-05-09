@@ -122,8 +122,10 @@ public class PhotoCapture : MonoBehaviour
     // https://answers.unity.com/questions/29764/how-can-i-check-when-the-centre-of-camera-is-looki.html
     void checkWhatHit()
     {
+
+        int layerMask = LayerMask.GetMask("Default");
         Vector3 cameraCenter = cam.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, cam.nearClipPlane));
-        if (Physics.Raycast(cameraCenter, cam.transform.forward, out hit, 10000))
+        if (Physics.Raycast(cameraCenter, cam.transform.forward, out hit, 10000, layerMask))
         {
             objectHit = hit.transform.gameObject;
         }
@@ -135,7 +137,7 @@ public class PhotoCapture : MonoBehaviour
         //Debug.Log(objectHit.tag);
         switch (objectHit.tag)
         {
-            case "Goose":
+            case "Deer":
                 addMoney(0,50);
                 Texture2D animalCapture0 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture0);
@@ -150,29 +152,29 @@ public class PhotoCapture : MonoBehaviour
                 Sprite.Create(animalCapture1, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 animalPictures.Photos[1] = sprite;
                 break;
-            case "Fox":
+            case "Goose":
                 Texture2D animalCapture2 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture2);
                 Sprite.Create(animalCapture2, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                animalPictures.Photos[1] = sprite;
+                animalPictures.Photos[2] = sprite;
                 break;
             case "bear":
                 Texture2D animalCapture3 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture3);
                 Sprite.Create(animalCapture3, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                animalPictures.Photos[1] = sprite;
+                animalPictures.Photos[3] = sprite;
                 break;
             case "Butterfly":
                 Texture2D animalCapture4 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture4);
                 Sprite.Create(animalCapture4, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                animalPictures.Photos[1] = sprite;
+                animalPictures.Photos[4] = sprite;
                 break;
             case "Wolf":
                 Texture2D animalCapture5 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture5);
                 Sprite.Create(animalCapture5, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                animalPictures.Photos[1] = sprite;
+                animalPictures.Photos[5] = sprite;
                 break;
             default:
                 break;
