@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AnimalInfo.unity
     guid: 62abe50ff1f09b444b747f08a0bf7ac4
+  - enabled: 1
+    path: Assets/Scenes/VideoIntro.unity
+    guid: 586f6565da5f2714da4d3a7f9dab71fc
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
