@@ -8,6 +8,7 @@ TagManager:
   - Event
   - Deer
   - Empty
+  - Goose
   layers:
   - Default
   - TransparentFX
