@@ -6,13 +6,19 @@ Properties {
     _MainTex ("Base (A=Opacity)", 2D) = ""
 }
   
+
+
 Category {
     Tags {"Queue"="Transparent" "IgnoreProjector"="True"}
     ZWrite Off
     Blend SrcAlpha OneMinusSrcAlpha
     Cull front 
-  
+
+
+    
+
     SubShader {Pass {
+        
         GLSLPROGRAM
         varying mediump vec2 uv;
         
@@ -30,12 +36,16 @@ Category {
         void main() {
             gl_FragColor = texture2D(_MainTex, uv) * _Color;
         }
-        #endif     
+        #endif   
         ENDGLSL
+        
     }}
     
     SubShader {Pass {
+
+        Fog { Mode Off }
         SetTexture[_MainTex] {Combine texture * constant ConstantColor[_Color]}
+        
     }}
 }
   

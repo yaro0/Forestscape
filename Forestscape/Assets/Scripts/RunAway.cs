@@ -9,7 +9,7 @@ public class RunAway : MonoBehaviour
     public GameObject player;
     private Animator animator;
 
-    public float playerDistanceRun = 4.0f;
+    public float playerDistanceRun = 50.0f;
     public float playerDistanceRun2 = 1.0f;
     // Start is called before the first frame update
     void Start()

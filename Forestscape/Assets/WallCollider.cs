@@ -5,7 +5,7 @@ using UnityEngine;
 public class WallCollider : MonoBehaviour
 {
     
-    private void OnTriggerEnter(WallCollider other)
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("hit detected");
     }
