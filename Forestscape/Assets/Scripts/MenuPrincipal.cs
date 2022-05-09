@@ -24,7 +24,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void newGame()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("VideoIntro");
     }
 
     public void Exit()
@@ -46,12 +46,16 @@ public class Save
     {
         foreach (ScriptableObject script in Resources.FindObjectsOfTypeAll<ScriptableObject>())
         {
-            if (AssetDatabase.
-                Contains(script))
-            {
+            //if (AssetDatabase.AssetPathToGUID("Assets/Scripts") == script.) {
+
+            //}
+            
+                //AssetDatabase.GetAssetPath(script) == "Assets/Scripts")
+                //AssetDatabase.FindAssets
+                //Contains(script))
                 scripts.Add(script);
                 Debug.Log(script.ToString());
-            }
+            
             
             
             
