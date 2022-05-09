@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16298,6 +16298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   picturesList: {fileID: 11400000, guid: 4846777ce72f08e49813adae4361ac32, type: 2}
   i: 0
+  playerMoney: {fileID: 11400000, guid: 9f6aea9128b302548b4841a5c6d55896, type: 2}
   changingText: {fileID: 648827070}
 --- !u!1 &1888439323
 GameObject:
