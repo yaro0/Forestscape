@@ -72,12 +72,12 @@ public class DOORANIM : MonoBehaviour
             Debug.Log("Dorr has been touched");
             if (doorState == DoorState.Opened)
             {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Close";
+                txtToDisplay.GetComponent<Text>().text = "Appuyez 'E' pour interagir";
                 //doorCollider.enabled = false;
             }
             else if (doorState == DoorState.Closed)//|| gotKey
             {
-                txtToDisplay.GetComponent<Text>().text = "Press 'E' to Open";
+                txtToDisplay.GetComponent<Text>().text = "Appuyez 'E' pour interagir";
                 doorCollider.enabled = true;
             }
             else if (doorState == DoorState.Jammed)
