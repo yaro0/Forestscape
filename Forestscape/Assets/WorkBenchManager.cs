@@ -8,7 +8,7 @@ using TMPro;
 public class WorkBenchManager : MonoBehaviour
 {
     public int[,] purchasableItems = new int[3,5];
-    private float money;
+    private int money;
 
     public PlayerCurrency playerMoney;
     public TextMeshProUGUI moneyText;
@@ -48,7 +48,7 @@ public class WorkBenchManager : MonoBehaviour
          activateUpgrade(ButtonRef);
       }
 
-        playerMoney.Money.Equals(money);
+        playerMoney.playerMoney = money; 
 
     }
 

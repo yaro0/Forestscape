@@ -9,6 +9,7 @@ TagManager:
   - Deer
   - Empty
   - Goose
+  - Monarch
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Walls
   - Usable
   - 
   - 
