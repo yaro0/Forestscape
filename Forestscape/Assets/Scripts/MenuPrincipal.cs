@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using UnityEngine.Networking;
+using UnityEngine.UI;
 
 public class MenuPrincipal : MonoBehaviour
 {
@@ -20,5 +23,11 @@ public class MenuPrincipal : MonoBehaviour
     public void newGame()
     {
         SceneManager.LoadScene("MainScene");
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
