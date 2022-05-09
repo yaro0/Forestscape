@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class MenuPrincipal : MonoBehaviour
 {
+    Save save = new Save();
     // Start is called before the first frame update
     void Start()
     {
@@ -28,18 +29,22 @@ public class MenuPrincipal : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
+
+    //public void
 }
 
 public class Save
 {
-
-    //List<GameObject> gameObjectSaved = new List<GameObject>();
-
-    //public void Saving()
-    //{
+    List<ScriptableObject> scripts = new List<ScriptableObject>();
+    public void saving()
+    {
+        scripts.AddRange(Resources.FindObjectsOfTypeAll<ScriptableObject>());
+        Debug.Log(scripts.ToString());
         //Scene scene = SceneManager.GetSceneByName("MainScene");
         //scene.GetRootGameObjects(gameObjectSaved);
-    //}
+    }
+    
+    //scriptableObject = Resources.Load<SomeScriptableObject>("AssetName");
 }
