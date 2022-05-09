@@ -20,6 +20,7 @@ public class ChangeTextt : MonoBehaviour
     {
         //CheckCount has to be done only once when the scene is loaded**
         CheckCount();
+        TextChange();
 
         //Debug.Log(picturesList.Photos.Length); //this works but counts null obj
     }
