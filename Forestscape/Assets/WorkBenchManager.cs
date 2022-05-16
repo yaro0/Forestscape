@@ -19,7 +19,7 @@ public class WorkBenchManager : MonoBehaviour
     {
         money = playerMoney.Money;
         
-        moneyText.text = "Coins: " + money.ToString();
+        moneyText.text = money.ToString();
 
         //ID
         purchasableItems[1,1] = 1;
@@ -28,10 +28,10 @@ public class WorkBenchManager : MonoBehaviour
         purchasableItems[1,4] = 4;
 
         //Price
-        purchasableItems[2,1] = 10;
-        purchasableItems[2,2] = 20;
-        purchasableItems[2,3] = 30;
-        purchasableItems[2,4] = 40;
+        purchasableItems[2,1] = 100;
+        purchasableItems[2,2] = 200;
+        purchasableItems[2,3] = 300;
+        purchasableItems[2,4] = 400;
 
 
     }
@@ -44,7 +44,7 @@ public class WorkBenchManager : MonoBehaviour
       if(money >= purchasableItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID])
       {
          money -= purchasableItems[2,ButtonRef.GetComponent<ButtonInfo>().ItemID];
-         moneyText.text = "Coins: " + money.ToString();
+         moneyText.text = money.ToString();
          activateUpgrade(ButtonRef);
       }
 

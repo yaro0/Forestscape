@@ -150,13 +150,15 @@ public class PhotoCapture : MonoBehaviour
                 //test.sprite = animalPictures.Photos[0];
                 //Debug.Log("Yes");
                 break;
-            case "Gooses":
+            case "biche":
+                addMoney(0,50);
                 Texture2D animalCapture1 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture1);
                 Sprite.Create(animalCapture1, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 animalPictures.Photos[1] = sprite;
                 break;
             case "Goose":
+                addMoney(0,100);
                 Texture2D animalCapture2 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture2);
                 Sprite.Create(animalCapture2, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
@@ -168,13 +170,14 @@ public class PhotoCapture : MonoBehaviour
                 Sprite.Create(animalCapture3, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 animalPictures.Photos[3] = sprite;
                 break;
-            case "Butterfly":
+            case "Rabbit":
                 Texture2D animalCapture4 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture4);
                 Sprite.Create(animalCapture4, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
                 animalPictures.Photos[4] = sprite;
                 break;
-            case "Wolf":
+            case "Monarch":
+                addMoney(0,100);
                 Texture2D animalCapture5 = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
                 captureAnimal(animalCapture5);
                 Sprite.Create(animalCapture5, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
