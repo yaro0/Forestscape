@@ -10,8 +10,19 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
+    public void LoadAdditiveScene(string name)
+    {
+        SceneManager.LoadScene(name,LoadSceneMode.Additive);
+    }
     public void LoadScene(int i)
     {
         SceneManager.LoadScene(i);
     }
+
+    public void UnloadScene(string name)
+    {
+        SceneManager.UnloadScene(name);
+    }
+
+    
 }

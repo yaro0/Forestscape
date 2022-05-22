@@ -9,19 +9,21 @@ public class Worktable : MonoBehaviour
 
     public GameObject txtToDisplay;  
     private BoxCollider collider;
-    // Start is called before the first frame update
+    
     void Start()
     {
         collider = GetComponent<BoxCollider>();
     }
 
+    //quand on est devans la table on peut appuyer E pour ouvrir le worbench
     void OnTriggerStay(Collider collider) {  
-       //txtToDisplay.GetComponent<Text>().text = "Appuyez 'E' pour interagir";
+       
        if(Input.GetKeyDown(KeyCode.E)){
-           SceneManager.LoadScene (sceneName:"Workbench");
+           SceneManager.LoadScene (sceneName:"Workbench", LoadSceneMode.Additive);
        }   
     }  
 
+    //texte apparait pour indiquer quoi appuyer au joueur
     private void OnTriggerEnter(Collider collider)
     {
         txtToDisplay.SetActive(true);
