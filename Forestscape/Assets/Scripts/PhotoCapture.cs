@@ -128,9 +128,9 @@ public class PhotoCapture : MonoBehaviour
     // https://answers.unity.com/questions/29764/how-can-i-check-when-the-centre-of-camera-is-looki.html
     // inspiration de code 
 
+    ///Vérifie quel objet a été frappé grace au Raycast
     void checkWhatHit()
     {
-
         int layerMask = LayerMask.GetMask("Default");
         Vector3 cameraCenter = cam.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, cam.nearClipPlane));
         if (Physics.Raycast(cameraCenter, cam.transform.forward, out hit, 10000, layerMask))
@@ -143,6 +143,9 @@ public class PhotoCapture : MonoBehaviour
     void sortPhoto(Sprite sprite)
     {Debug.Log(objectHit.tag);
         //Debug.Log(objectHit.tag);
+
+        //Regarde le tag de l'objet qui a éte pris en photo et ajoute sa photo dans le carnet si le tag correspond à un des nom dans l'album
+        //ajoute également la somme d'argent associé a chaque animal à l'argent du joueur
         switch (objectHit.tag)
         {
             case "Deer":
@@ -151,8 +154,6 @@ public class PhotoCapture : MonoBehaviour
                 captureAnimal(animalCapture0);
                 
                 animalPictures.Photos[0] = Sprite.Create(animalCapture0, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                //test.sprite = animalPictures.Photos[0];
-                //Debug.Log("Yes");
                 break;
             case "biche":
                 addMoney(0,50);
@@ -194,6 +195,7 @@ public class PhotoCapture : MonoBehaviour
         objectHit = emptyObject;
     }
 
+    ///Prend l'Animal en photo
     void captureAnimal(Texture2D capture)
     {
         Rect regionToRead = new Rect(0, 0, Screen.width, Screen.height);
@@ -201,12 +203,11 @@ public class PhotoCapture : MonoBehaviour
         capture.Apply();
     }
 
+    ///Ajoute de l'argent au joueur
     void addMoney(int i, int moneyAdded)
     {
-        //Debug.Log(animalPictures.Photos[i] != emptyObject);
         if(animalPictures.Photos[i] == emptyObject || animalPictures.Photos[i] == null){
             money.playerMoney += moneyAdded;
-            //Debug.Log(money.playerMoney);
         }  
     }
 }

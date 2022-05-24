@@ -14,7 +14,6 @@ public class WorkBenchManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
 
     public InventoryScript inventory;
-    // Start is called before the first frame update
     void Start()
     {
         money = playerMoney.Money;
@@ -36,7 +35,9 @@ public class WorkBenchManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    ///<summary>
+    ///Fait l'achat d'un atout et enlève l'argent du joueur
+    ///</summary>
     public void Buy()
     {
       GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
@@ -52,6 +53,9 @@ public class WorkBenchManager : MonoBehaviour
 
     }
 
+    ///<summary>
+    ///Active l'atout choisi
+    ///</summary>
     public void activateUpgrade(GameObject button){
       inventory.inventory[button.GetComponent<ButtonInfo>().ItemID] = true;
     }

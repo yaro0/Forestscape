@@ -16,7 +16,7 @@ public class SavePosition : MonoBehaviour
 
     
     public Transform Target;
-    public script y;
+    public PlayerToBase y;
 
     private bool playerIsAtBase;
     private bool setPosition = false;
@@ -35,7 +35,7 @@ public class SavePosition : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
        

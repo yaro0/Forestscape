@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
+//inspiré de https://youtu.be/m9hj9PdO328
 [ExecuteAlways]
 public class LightingManager : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class LightingManager : MonoBehaviour
 
     }
 
+    //saute la nuit en faisant un fade in et out
     private void skipNight(){
         if(TimeOfDay >= 22.99 ){
             
@@ -73,7 +75,7 @@ public class LightingManager : MonoBehaviour
                 yield return null;
             }
             
-        // fade from opaque to transparent
+            // fade from opaque to transparent
             // loop over 1 second backwards
             for (float i = 1; i >= 0; i -= Time.deltaTime)
             {
@@ -86,6 +88,7 @@ public class LightingManager : MonoBehaviour
         
     }
     
+
 
     private void UpdateLighting(float timePercent)
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class script : MonoBehaviour
+public class PlayerToBase : MonoBehaviour
 {
     public GameObject player;
     public GameObject sceneManager;
@@ -12,7 +12,7 @@ public class script : MonoBehaviour
     public Transform Target;
 
     private bool playerIsAtBase;
-    // Start is called before the first frame update
+    
     void Start()
     {
 
@@ -20,12 +20,15 @@ public class script : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         returnPlayerToBase();
     }
 
+    ///<summary>
+    ///Retourne le joueur à sa position de départ dans la maison (déterminé par la variable Target) lors de la nuit
+    ///</summary>
     private void returnPlayerToBase()
     {
         float time = sceneManager.GetComponent<LightingManager>().getTimeOfDay();
@@ -33,7 +36,7 @@ public class script : MonoBehaviour
         if (time >= 2 && time <= 6 && !playerIsAtBase)
         {
             player.transform.position = Target.position;
-            //player.GetComponent<SUPERCharacterAIO>().enableMovementControl();
+            
         }
     }
 }
