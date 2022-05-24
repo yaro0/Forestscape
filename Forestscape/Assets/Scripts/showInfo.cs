@@ -8,14 +8,10 @@ public class showInfo : MonoBehaviour
     [SerializeField] private PicturesObject picturesList;
     [SerializeField] int i;
     [SerializeField] GameObject info;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+   
     void Update()
     {
+        //si la photo a été prise alors montre l'info sur l'animal
         if(picturesList.Photos[i] != null){
             info.SetActive(true);
         }

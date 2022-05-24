@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-//https://youtu.be/Zjlg9F3FRJs
+//inspiré de https://youtu.be/Zjlg9F3FRJs
 
 public class AiMovementScript : MonoBehaviour
 {
@@ -24,28 +24,30 @@ public class AiMovementScript : MonoBehaviour
     public GameObject middleOfarea;
     public float roamRadius;
     private float distanceRemain;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        Debug.Log("AiMovementScript start");
+        
         rigidBodyComponent = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        System.Console.Write("isWalking false");
+        
         agent = GetComponent<NavMeshAgent>();
         agent.speed = 1;
        
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
+        //retourne la distance qu'il reste à l'animal à parcourir
         distanceRemain = agent.remainingDistance;
 
-
+        //si l'animal n'est pas en train de courir, commencer le processus de Freeroam (marcher + idle + manger) si pas déja activé
         if (isWandering == false && animator.GetBool("IsRunning") == false){
             StartCoroutine(FreeRoam());
         }
 
+        //Ancien code utilisé avec la première version de "Wander"
         /*
         if(isRotatingRight && animator.GetBool("IsRunning") == false) 
         {
@@ -62,22 +64,20 @@ public class AiMovementScript : MonoBehaviour
         }
         */
         
+        //commence à faire l'animation de "walk" s'il est en train de marcher et n'est pas en train de courir
         if(isWalking && animator.GetBool("IsRunning") == false)
         {
-        
-            //rigidBodyComponent.AddForce(transform.forward * movementSpeeed); 
             animator.SetBool("IsWalking", true);
            
-           // Debug.Log("isWalking true");
-
         }
 
+        //ne fait pas l'animation "walk" s'il ne marche pas
         if(!isWalking) {
             animator.SetBool("IsWalking", false);
-         
-           // Debug.Log("isWalking false");
+        
         }
 
+        //fait l'animation "eat" s'il est en train de manger
         if(isEating){
             animator.SetBool("IsEating", true);
         } else {
@@ -87,8 +87,11 @@ public class AiMovementScript : MonoBehaviour
 
     }
 
+    ///Deuxième version de "wander" avec l'utilisation de NavMesh
+    /// Déplace l'animal dans un milieu restrain
     void Wander2()
     {
+        //hit une position à l'interieur d'un rayon défini (avec l'objet middleOfarea comme centre du cercle) et crée un path vers la position qui a été hit
         Vector3 randomDirection = Random.insideUnitSphere * roamRadius;
         randomDirection += middleOfarea.transform.position;
         NavMeshHit hit;
@@ -98,37 +101,43 @@ public class AiMovementScript : MonoBehaviour
 
     }
 
+    ///Fait bouger l'animal d'une façon naturelle et alèatoire
     IEnumerator FreeRoam()
     {
-        int eatWait = Random.Range(1, 5);
+        //déclaration du nombres de secondes que peut prendre l'animal pour faire une action
+        int eatOrIdleWait = Random.Range(1, 5);
         int walkWait = Random.Range(1, 20);
 
+        //début du wandering
         isWandering = true;
         
+        //décide si l'animal fait l'animation de "eat" ou non (une chance sur deux)
         int eatOrNot = Random.Range(1, 3);
         if (eatOrNot == 1)
         {
+            //fait l'animation de "eat"
             isEating = true;
         }
-        yield return new WaitForSeconds(eatWait);
+        //attend un nombres de seconde aléatoire "eatOrIdleWait" pour l'execution de l'action ou l'animal ne se déplace pas (manger ou idle)
+        yield return new WaitForSeconds(eatOrIdleWait);
         isEating = false;
         yield return new WaitForSeconds(walkWait);
 
-        
+        //animal commence à marcher
         isWalking = true;
         
+        //donne un chemin à suivre à l'animal
         Wander2();
+
         yield return new WaitForSeconds(1);
-        //float distanceRemain = agent.remainingDistance;
-        Debug.Log(distanceRemain);
+        //isWalking tant que l'animal n'a pas fini son chemin (path) vers son point d'arrivé
         yield return new WaitUntil(() => distanceRemain == 0);
         if (distanceRemain == 0)
         {
           isWalking = false;  
         }
 
-        Debug.Log(distanceRemain + "ss");
-
+        //arrete de marcher quand il a fini son chemin aléatoire
         isWandering = false;
 
     }
@@ -138,8 +147,9 @@ public class AiMovementScript : MonoBehaviour
         yield return new WaitUntil(() => distanceRemain == 0);
     }
      
-
+     ///Première version de "wander" sans l'utilisation de NavMesh
     IEnumerator Wander(){
+        //déclaration du nombres de secondes que peut prendre l'animal pour se déplacer
         int rotationTime = Random.Range(1, 3);
         int rotationWait = Random.Range(1, 3);
         int rotationDirection = Random.Range(1, 3);
@@ -147,7 +157,9 @@ public class AiMovementScript : MonoBehaviour
         int eatWait = Random.Range(1,5);
         int walkTime = Random.Range(3,10);
 
+        
         isWandering = true;
+        //décide si l'animal fait l'animation de "eat" ou non 
         int eatOrNot = Random.Range(1, 3);
         if(eatOrNot == 1){
             isEating = true;
@@ -155,34 +167,27 @@ public class AiMovementScript : MonoBehaviour
         yield return new WaitForSeconds(eatWait);
         isEating =false;
 
+        //animal marche
         yield return new WaitForSeconds(walkWait);
         isWalking = true;
-        //Debug.Log("isWalking true");
-
-        //animator.SetBool("IsWalking", true);
+        
+        //animal tourne vers la gauche pour un temps aléatoire
         yield return new WaitForSeconds(walkTime);
         if(rotationDirection == 1){
             isRotatingLeft = true;
             yield return new WaitForSeconds(rotationTime);
             isRotatingLeft = false;
         }
-        
 
+        //animal tourne vers la droite pour un temps aléatoire
         if(rotationDirection == 2){
             isRotatingRight = true;
             yield return new WaitForSeconds(rotationTime);
             isRotatingRight = false;
         }
 
-        isWalking = false;
-        Debug.Log("isWalking false");
+        //animal arréte de marcher
         animator.SetBool("IsWalking", false);
-        
-        
-        //yield return new WaitForSeconds(rotationWait);
-
-
-        
         isWandering = false;
 
     }
