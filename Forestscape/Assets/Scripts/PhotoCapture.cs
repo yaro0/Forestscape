@@ -48,16 +48,10 @@ public class PhotoCapture : MonoBehaviour
 
     private void Update()
     {
-        //Temporary
-        /*
-        if (Input.GetKeyDown(KeyCode.S)){
-            SceneManager.LoadScene("AnimalInfo");
-        }
-        */
+        
 
         if (photoMode == true)
         {
-            //cam = Camera.main;
 
             emptyObject = new GameObject("Empty GameObject");
             emptyObject.tag = "Empty";
@@ -101,6 +95,7 @@ public class PhotoCapture : MonoBehaviour
 
             }
 
+            //displays the photo
             Sprite ShowPhoto()
             {
                 Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
@@ -110,6 +105,7 @@ public class PhotoCapture : MonoBehaviour
                 return Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
             }
 
+            //removes the photo 
             void RemovePhoto()
             {
                 crosshair.SetActive(true);
