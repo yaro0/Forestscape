@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PanelOpener : MonoBehaviour
 {
+    /// <summary>
+    /// Open panel pour les réglages
+    /// </summary>
     public GameObject Panel;
     
     public void OpenPanel()

@@ -22,6 +22,9 @@ public class MenuPrincipal : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Commence le jeu avec la vidéo d'intro
+    /// </summary>
     public void newGame()
     {
         SceneManager.LoadScene("VideoIntro");
@@ -33,12 +36,18 @@ public class MenuPrincipal : MonoBehaviour
         //UnityEditor.EditorApplication.isPlaying = false;
     }
 
+    /// <summary>
+    /// Appel classe save code
+    /// </summary>
     public void saving()
     {
         save.saving();
     }
 }
 
+/// <summary>
+/// Processus de save
+/// </summary>
 public class Save
 {
     List<ScriptableObject> scripts = new List<ScriptableObject>();
@@ -46,23 +55,8 @@ public class Save
     {
         foreach (ScriptableObject script in Resources.FindObjectsOfTypeAll<ScriptableObject>())
         {
-
-            //if (AssetDatabase.AssetPathToGUID("Assets/Scripts") == AssetDatabase.GetAssetPath(script)) {
             scripts.Add(script);
-            Debug.Log(script.name.ToString());
-            //}
-            //AssetDatabase.GetAssetPath(script) == "Assets/Scripts")
-            //AssetDatabase.FindAssets
-            //Contains(script))
-            //foreach (Resources.FindObjectsOfTypeAll<ScriptableObject>())
-            //{
-            //scripts.Add()
-            //}
-            //scripts.Add(Resources.FindObjectsOfTypeAll<ScriptableObject>());
-            //Scene scene = SceneManager.GetSceneByName("MainScene");
-            //scene.GetRootGameObjects(gameObjectSaved);
+            //Debug.Log(script.name.ToString());
         }
     }
-    
-    //scriptableObject = Resources.Load<SomeScriptableObject>("AssetName");
 }
