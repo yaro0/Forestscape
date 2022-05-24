@@ -24,6 +24,9 @@ public class RunAway : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
+        //si la distance du joueur est plus petite que "playerDistanceRun" et si le joueur ne crouch pas, alors l'animal doit s'enfuir/courir du joueur
+        //ou si le joueur crouch et la distance du joueur est plus petite que "payerDistanceRun2" l'animal doit s'enfuir aussi.
+
         if((distance < playerDistanceRun && UnityEngine.Input.GetKeyDown(KeyCode.LeftControl) == false) || 
         (distance < playerDistanceRun2 && UnityEngine.Input.GetKeyDown(KeyCode.LeftControl) == true)){
 
@@ -39,9 +42,10 @@ public class RunAway : MonoBehaviour
     
             float distanceRemain  = agent.remainingDistance;
 
+            //path doit etre reset quand animal a fini de courir
             if(distanceRemain <= 0){
                 agent.ResetPath();
-                //Debug.Log("reset path");
+                
                 animator.SetBool("IsRunning", false);
             }
 

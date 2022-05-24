@@ -21,49 +21,35 @@ public class SavePosition : MonoBehaviour
     private bool playerIsAtBase;
     private bool setPosition = false;
 
-    public static Vector3 lastPlayerPos;
-    
-    
-    // Start is called before the first frame update
+    //ce code n'est pas nécessaire pour le moment, mais nous voulions l'utiliser si nous avions eu le temps de faire un sauvegarde du jeu.
     void Start()
     {
-       // playerIsAtBase = false;
-
-
-        //if(position.Position[id] != null )
-        //{
+     
             GetComponent<SUPERCharacterAIO>().enabled = false;
+            //prend la dernière position sauvegardé dans le scriptable object position
            player.transform.position = position.Position[id];
-           //lastPlayerPos = transform.position;
+           
             StartCoroutine(wait(1));
             GetComponent<SUPERCharacterAIO>().enabled = true;
-        //}
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+       
+       //prend la dernière position suavegardé dans le scriptable object au premier load de la scene
         if(position.Position[id] != null && !setPosition)
         {
             player.transform.position = position.Position[id];
             setPosition = true;
-            //GetComponent<SUPERCharacterAIO>().enabled = true;
+            
         }
- /*
-        if(lastPlayerPos != null && !setPosition)
-        {
-            player.transform.position = lastPlayerPos;
-            setPosition = true;
-            //GetComponent<SUPERCharacterAIO>().enabled = true;
-        }*/
+
+        //sauve la nouvelle position à chaque update() dans le scriptable object
+        position.Position[id] = transform.position;
         
-        EditorUtility.SetDirty(position);
-        lastPlayerPos = transform.position;
-        //position.Position[id] = transform.position;
-        //GetComponent<SUPERCharacterAIO>().enabled = true;
 
         returnPlayerToBase();
         
@@ -76,6 +62,7 @@ public class SavePosition : MonoBehaviour
     {
         float time = sceneManager.GetComponent<LightingManager>().getTimeOfDay();
 
+        //après 23h le joueur retourne à la maison pour dormir
         if (time >= 23 &&  !playerIsAtBase)
         {
             player.transform.position = Target.position;
