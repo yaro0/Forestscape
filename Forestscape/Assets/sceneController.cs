@@ -13,14 +13,18 @@ public class sceneController : MonoBehaviour
 
     void Update()
     {
-        //s'il y a plus que deux scenes, on désactive le joueur, le canvas et les montagnes 
-        //(pour ne pas avoir de conflits avec les autre scenes, mais pour que le temps continu)
+        //s'il y a plus que deux scenes, on désactive le joueur, le canvas et les montagnes. 
+        //(pour ne pas avoir de conflits avec les autre scenes, mais pour que le temps continu).
         nbCurrentScenes = SceneManager.sceneCount;
         if(nbCurrentScenes > 1){
             player.SetActive(false);
             canvas.SetActive(false);
             mountains.SetActive(false);
         } else {
+            //reblock le curseur au milieu de l'écran.
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            
             player.SetActive(true);
             canvas.SetActive(true);
             mountains.SetActive(true);
