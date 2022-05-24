@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class PhotoCapture : MonoBehaviour
 {
+
+    //Variables 
+
     [Header("Photo Taker")]
     [SerializeField] private Image photoDisplayArea;
 
-    //[SerializeField] private Image test;
     [SerializeField] private GameObject photoFrame;
 
     [Header("Photo Fader Effect")]
@@ -49,7 +51,7 @@ public class PhotoCapture : MonoBehaviour
     private void Update()
     {
         
-
+        //creation du nouveau gameobject pour prendre la capture d'ecran
         if (photoMode == true)
         {
 
@@ -79,6 +81,7 @@ public class PhotoCapture : MonoBehaviour
                 }
             }
 
+            //prend une capture d'ecran du point de vue de la main camera (ce que le joueur voit)
             IEnumerator CapturePhoto()
             {
                 //Camera UI set false
@@ -95,7 +98,7 @@ public class PhotoCapture : MonoBehaviour
 
             }
 
-            //displays the photo
+            //montre la photo et y met un frame autour
             Sprite ShowPhoto()
             {
                 Sprite photoSprite = Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
@@ -105,7 +108,7 @@ public class PhotoCapture : MonoBehaviour
                 return Sprite.Create(screenCapture, new Rect(0.0f, 0.0f, screenCapture.width, screenCapture.height), new Vector2(0.5f, 0.5f), 100.0f);
             }
 
-            //removes the photo 
+            //enleve la photo
             void RemovePhoto()
             {
                 crosshair.SetActive(true);
@@ -119,7 +122,12 @@ public class PhotoCapture : MonoBehaviour
 
     }
 
+    //le code qui suit sera pour mettre les photos prises dans l'album photo et il associe chaque animal pris en photo a son endroit respectif dans l'album
+
+
     // https://answers.unity.com/questions/29764/how-can-i-check-when-the-centre-of-camera-is-looki.html
+    // inspiration de code 
+
     void checkWhatHit()
     {
 
