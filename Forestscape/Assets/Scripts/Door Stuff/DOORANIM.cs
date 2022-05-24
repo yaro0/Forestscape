@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class DOORANIM : MonoBehaviour
 {
+//Base de code vient de l'Asset Store, du l'asset appelé "Apartment Door", il a ensuite été modifié pour être adapté à notre jeu
     public bool keyNeeded = false;              //Is key needed for the door
     public bool gotKey;                  //Has the player acquired key
     public GameObject keyGameObject;            //If player has Key,  assign it here
