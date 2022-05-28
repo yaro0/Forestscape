@@ -9,7 +9,7 @@ using UnityEditor;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    Save save = new Save();
+    //Save save = new Save();
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +27,7 @@ public class MenuPrincipal : MonoBehaviour
     /// </summary>
     public void newGame()
     {
+        DataPersistenceManager.instance.NewGame();
         SceneManager.LoadScene("VideoIntro");
     }
 
@@ -39,16 +40,17 @@ public class MenuPrincipal : MonoBehaviour
     /// <summary>
     /// Appel classe save code
     /// </summary>
-    public void saving()
+    /*public void saving()
     {
         save.saving();
     }
+    */
 }
 
 /// <summary>
 /// Processus de save
 /// </summary>
-public class Save
+/*public class Save
 {
     List<ScriptableObject> scripts = new List<ScriptableObject>();
     public void saving()
@@ -60,3 +62,4 @@ public class Save
         }
     }
 }
+*/
