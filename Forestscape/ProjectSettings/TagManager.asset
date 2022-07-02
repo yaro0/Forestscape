@@ -20,9 +20,9 @@ TagManager:
   - UI
   - Walls
   - Usable
-  - 
-  - 
-  - 
+  - icons
+  - icons2
+  - clouds
   - 
   - 
   - 
@@ -45,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: icons
+    uniqueID: 2429840227
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

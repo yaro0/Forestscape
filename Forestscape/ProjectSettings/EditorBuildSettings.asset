@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Workbench.unity
     guid: c21f20fb94438534c98ccc1b9b72fe59
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Photograph.unity
     guid: f57dd484a1d62824d8dfa6fb429e10f6
   - enabled: 1
