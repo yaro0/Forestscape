@@ -5,7 +5,8 @@ using UnityEngine;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DOORANIM : MonoBehaviour
+public class DOORANIM : MonoBehaviour, IDataPersistence
+
 {
 //Base de code vient de l'Asset Store, du l'asset appelé "Apartment Door", il a ensuite été modifié pour être adapté à notre jeu
     public bool keyNeeded = false;              //Is key needed for the door
@@ -28,9 +29,17 @@ public class DOORANIM : MonoBehaviour
 
     DoorState doorState = new DoorState();      //To check the current state of the door
 
-    /// <summary>
-    /// Initial State of every variables
-    /// </summary>
+    public void LoadData(GameData data)
+    {
+        this.doorOpened = data.doorOpened;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.doorOpened = this.doorOpened;
+    }
+
+
     private void Start()
     {
         gotKey = false;

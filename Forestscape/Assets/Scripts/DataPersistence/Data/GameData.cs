@@ -10,6 +10,7 @@ public class GameData
 
     public float playerPositiony;
     public float playerPositionz;
+    public bool doorOpened;
 
 
     //this constructor defines the default values, they're going to be used when theres no data to load
@@ -18,5 +19,6 @@ public class GameData
         this.playerPositionx = 425;
         this.playerPositiony = 66;
         this.playerPositionz = 608;
+        this.doorOpened= false;
     }
 }
