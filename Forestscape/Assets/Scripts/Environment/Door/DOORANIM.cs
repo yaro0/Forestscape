@@ -43,9 +43,11 @@ public class DOORANIM : MonoBehaviour, IDataPersistence
     private void Start()
     {
         gotKey = false;
-        doorOpened = false;                     //Is the door currently opened
+        //doorOpened = false;  //Is the door currently opened
+
+        
         playerInZone = false;                   //Player not in zone
-        doorState = DoorState.Closed;           //Starting state is door closed
+        //doorState = DoorState.Closed;           //Starting state is door closed
 
         txtToDisplay.SetActive(false);
 

@@ -6,9 +6,18 @@ using System.Linq;
 
 public class DataPersistenceManager : MonoBehaviour
 {
+
+    [Header("File Storage Config")]
+
+    [SerializeField] private string fileName;
+
+
+
+
     public static DataPersistenceManager instance { get; private set; }
     private GameData gameData;
     private List<IDataPersistence> dataPersistenceObjects;
+    private FileDataHandler dataHandler;
 
 
 
@@ -23,6 +32,8 @@ public class DataPersistenceManager : MonoBehaviour
     }
     private void Start()
     {
+        //Application.persistentDataPath is a basic path in your files depending on your system: Example- C:\Users\alina\AppData\LocalLow\DefaultCompany\Forestscape
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
         LoadGame();
     }
@@ -35,6 +46,9 @@ public class DataPersistenceManager : MonoBehaviour
     public void LoadGame()
     {
         //Load any saved data from a saved file using the data handler
+        this.gameData = dataHandler.Load();
+
+
 
         //if no data can be loaded, initialize to a new game
         if (this.gameData == null)
@@ -62,6 +76,9 @@ public class DataPersistenceManager : MonoBehaviour
         }
         //save that data to a file using the data handler
         Debug.Log("Saved Door state" + gameData.doorOpened);
+
+        //save that data to a file using the data handler
+        dataHandler.Save(gameData);
     }
     private void OnApplicationQuit()
     {
