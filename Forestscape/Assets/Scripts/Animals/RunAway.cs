@@ -10,7 +10,7 @@ public class RunAway : MonoBehaviour
     private Animator animator;
 
     public float playerDistanceRun = 50.0f;
-    public float playerDistanceRun2 = 1.0f;
+    public float playerDistanceRun2 = 10.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,23 +32,27 @@ public class RunAway : MonoBehaviour
 
             Vector3 dirToPlayer = transform.position - player.transform.position;
             Vector3 newPos = transform.position + dirToPlayer*4;
-        
-            agent.SetDestination(newPos);
-            //StartCoroutine(Run());
+
             animator.SetBool("IsWalking", false);
             animator.SetBool("IsRunning", true);
+            agent.speed = 25;
+            agent.destination = newPos;
+            //StartCoroutine(Run());
             
-        }
-    
             float distanceRemain  = agent.remainingDistance;
 
             //path doit etre reset quand animal a fini de courir
             if(distanceRemain <= 0){
-                agent.ResetPath();
+               // agent.ResetPath();
                 
                 animator.SetBool("IsRunning", false);
+                
             }
+        }
+    
+            
 
+            //Debug.Log(distance < playerDistanceRun && UnityEngine.Input.GetKeyDown(KeyCode.LeftControl) == false);
     }
 
     private IEnumerator Run(){

@@ -22,6 +22,7 @@ public class AiMovementScript : MonoBehaviour
     private NavMeshAgent agent;
 
     public GameObject middleOfarea;
+    private Vector3 position;
     public float roamRadius;
     private float distanceRemain;
     
@@ -33,6 +34,8 @@ public class AiMovementScript : MonoBehaviour
         
         agent = GetComponent<NavMeshAgent>();
         agent.speed = 1;
+
+        position = transform.position;
        
     }
 
@@ -84,6 +87,10 @@ public class AiMovementScript : MonoBehaviour
             animator.SetBool("IsEating", false);
         }
 
+        if (isWalking || animator.GetBool("IsRunning")){
+            CheckIfStuck();
+        }
+        
 
     }
 
@@ -92,12 +99,14 @@ public class AiMovementScript : MonoBehaviour
     void Wander2()
     {
         //hit une position à l'interieur d'un rayon défini (avec l'objet middleOfarea comme centre du cercle) et crée un path vers la position qui a été hit
+        agent.speed = movementSpeeed;
         Vector3 randomDirection = Random.insideUnitSphere * roamRadius;
         randomDirection += middleOfarea.transform.position;
         NavMeshHit hit;
         NavMesh.SamplePosition(randomDirection, out hit, roamRadius, 1);
         Vector3 finalPosition = hit.position;
         agent.destination = finalPosition;
+        
 
     }
 
@@ -131,10 +140,11 @@ public class AiMovementScript : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         //isWalking tant que l'animal n'a pas fini son chemin (path) vers son point d'arrivé
-        yield return new WaitUntil(() => distanceRemain == 0);
-        if (distanceRemain == 0)
+        yield return new WaitUntil(() => distanceRemain <= 5);
+        if (distanceRemain <= 5)
         {
           isWalking = false;  
+          agent.destination = rigidBodyComponent.transform.position;
         }
 
         //arrete de marcher quand il a fini son chemin aléatoire
@@ -190,5 +200,15 @@ public class AiMovementScript : MonoBehaviour
         animator.SetBool("IsWalking", false);
         isWandering = false;
 
+    }
+
+    IEnumerator CheckIfStuck(){
+        position = transform.position;
+        yield return new WaitForSeconds(5);
+        if(transform.position == position || 
+        ((int)transform.position.y == (int)position.y && (int)transform.position.z == (int)position.z && (int)transform.position.x == (int)position.x) ) {
+            agent.destination = rigidBodyComponent.transform.position;
+            Debug.Log("yes");
+        }
     }
 }
