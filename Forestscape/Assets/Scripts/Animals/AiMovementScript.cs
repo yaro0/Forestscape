@@ -10,7 +10,7 @@ public class AiMovementScript : MonoBehaviour
     private Animator animator;
 
     private Rigidbody rigidBodyComponent;
-    public float movementSpeeed = 20f;
+    public float movementSpeeed = 1f;
     public float rotationSpeed = 100f;
 
     private bool isWandering =false;
@@ -33,7 +33,7 @@ public class AiMovementScript : MonoBehaviour
         animator = GetComponent<Animator>();
         
         agent = GetComponent<NavMeshAgent>();
-        agent.speed = 1;
+        agent.speed = 0.5f;
 
         position = transform.position;
        
@@ -45,6 +45,9 @@ public class AiMovementScript : MonoBehaviour
         //retourne la distance qu'il reste à l'animal à parcourir
         distanceRemain = agent.remainingDistance;
 
+        if(distanceRemain == 0){
+            isWalking = false;
+        }
         //si l'animal n'est pas en train de courir, commencer le processus de Freeroam (marcher + idle + manger) si pas déja activé
         if (isWandering == false && animator.GetBool("IsRunning") == false){
             StartCoroutine(FreeRoam());
@@ -98,6 +101,7 @@ public class AiMovementScript : MonoBehaviour
     /// Déplace l'animal dans un milieu restrain
     void Wander2()
     {
+        
         //hit une position à l'interieur d'un rayon défini (avec l'objet middleOfarea comme centre du cercle) et crée un path vers la position qui a été hit
         agent.speed = movementSpeeed;
         Vector3 randomDirection = Random.insideUnitSphere * roamRadius;
@@ -110,12 +114,14 @@ public class AiMovementScript : MonoBehaviour
 
     }
 
+
     ///Fait bouger l'animal d'une façon naturelle et alèatoire
     IEnumerator FreeRoam()
     {
         //déclaration du nombres de secondes que peut prendre l'animal pour faire une action
         int eatOrIdleWait = Random.Range(1, 5);
         int walkWait = Random.Range(1, 20);
+        int walkTime = Random.Range(10, 20);
 
         //début du wandering
         isWandering = true;
@@ -131,13 +137,18 @@ public class AiMovementScript : MonoBehaviour
         yield return new WaitForSeconds(eatOrIdleWait);
         isEating = false;
         yield return new WaitForSeconds(walkWait);
-
+        
+        agent.isStopped = false;
         //animal commence à marcher
         isWalking = true;
         
         //donne un chemin à suivre à l'animal
         Wander2();
+        yield return new WaitForSeconds(walkTime);
+        isWalking = false; 
+        agent.isStopped = true;
 
+        /*
         yield return new WaitForSeconds(1);
         //isWalking tant que l'animal n'a pas fini son chemin (path) vers son point d'arrivé
         yield return new WaitUntil(() => distanceRemain <= 5);
@@ -146,6 +157,7 @@ public class AiMovementScript : MonoBehaviour
           isWalking = false;  
           agent.destination = rigidBodyComponent.transform.position;
         }
+        */
 
         //arrete de marcher quand il a fini son chemin aléatoire
         isWandering = false;
@@ -157,6 +169,7 @@ public class AiMovementScript : MonoBehaviour
         yield return new WaitUntil(() => distanceRemain == 0);
     }
      
+     /*
      ///Première version de "wander" sans l'utilisation de NavMesh
     IEnumerator Wander(){
         //déclaration du nombres de secondes que peut prendre l'animal pour se déplacer
@@ -201,6 +214,7 @@ public class AiMovementScript : MonoBehaviour
         isWandering = false;
 
     }
+    */
 
     IEnumerator CheckIfStuck(){
         position = transform.position;
