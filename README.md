@@ -14,10 +14,10 @@ C# avec Unity
 ## État de construction 
 première version du jeu
 
-##Technologies utilisées
+## Technologies utilisées
 Unity, Visual Studio
 
-##Captures d’écran du jeu/démo 
+## Captures d’écran du jeu/démo 
 
 ![image](https://user-images.githubusercontent.com/69054726/169936431-71d1bd48-751e-4b73-ac21-4a7641527bad.png)
 
