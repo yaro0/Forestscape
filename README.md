@@ -1,31 +1,33 @@
-# H22-GR4-JeuExploration
 
 ![image](https://user-images.githubusercontent.com/69054726/169936352-c0496657-d3a1-4fb6-b022-c5ea7bd740c4.png)
 
-Forestscape 
+# Forestscape 
 
 Projet fait par : Yaroslava Kost, Myriam Ouellette, Martina Piedimonte et Alina Alenikova
 
-Motivation : 
+## Motivation
 Notre jeu permet à toute personne intéressée d’apprendre sur plusieurs animaux divers. C’est un jeu éducatif et amusant, qui motive le monde à se familiariser avec le monde qui nous entoure.
 
-Style de code: C# 
+## Style de code
+C# avec Unity
 
-État de construction: première version du jeu
+## État de construction 
+première version du jeu
 
-Technologies utilisées: Unity, Visual Studio
+##Technologies utilisées
+Unity, Visual Studio
 
-Captures d’écran du jeu/démo  :
+##Captures d’écran du jeu/démo 
 
 ![image](https://user-images.githubusercontent.com/69054726/169936431-71d1bd48-751e-4b73-ac21-4a7641527bad.png)
 
- ![image](https://user-images.githubusercontent.com/69054726/169936451-e84fe37b-54f6-4356-bab2-64d9af954755.png)
+![image](https://user-images.githubusercontent.com/69054726/169936451-e84fe37b-54f6-4356-bab2-64d9af954755.png)
 ![image](https://user-images.githubusercontent.com/69054726/169936486-937159fd-1a1b-45f6-8ecb-bb8cd85631fa.png)
 
   
 
 
-Fonctionnalités : 
+## Fonctionnalités 
 -	Jeu first person view
 -	Un grand terrain à explorer
 -	Plusieurs animaux à trouver
@@ -34,7 +36,7 @@ Fonctionnalités :
 -	Des ponts et des escaliers à réparer pour découvrir d’autres lieux
 -	Un système de points 
 
-Exemple de code :
+## Exemple de code :
 
 
 
@@ -93,7 +95,7 @@ Exemple de code :
 
 
 
-Comment utiliser le projet?
+## Comment utiliser le projet?
 
 Simplement télécharger l’exécutable et le cliquer deux fois pour jouer au jeu. Utiliser la souris pour naviguer les menus. Les boutons W, A, S, D pour se déplacer ainsi que le bouton espace pour sauter. Pour interagir avec l’environnement utiliser le bouton de clavier E. Pour ouvrir la caméra cliquer sur C et pour le carnet cliquer X. Une fois que la caméra est ouverte, vous pouvez faire un clic droit pour prendre la photo et ensuite faire un clic gauche pour mettre la photo dans le carnet. Pour pouvoir plus s’approcher d’un animal, tenez le bouton Shift pour s’accroupir. Le but du jeu est de trouver et de photographier le plus d’animaux possibles pour compléter le carnet.
 
